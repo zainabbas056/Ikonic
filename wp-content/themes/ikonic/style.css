@@ -1,0 +1,8644 @@
+/*!
+Theme Name: IKONIC
+Theme URI: https://ikonicsolution.com/
+Author: Zain Abbas
+Author URI: https://www.linkedin.com/in/zainabbas056/
+Description: Description
+Version: 1.0.0
+Tested up to: 5.4
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: ikonic
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+
+IKONIC is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Generic
+	- Normalize
+	- Box sizing
+# Base
+	- Typography
+	- Elements
+	- Links
+	- Forms
+## Layouts
+# Components
+	- Navigation
+	- Posts and pages
+	- Comments
+	- Widgets
+	- Media
+	- Captions
+	- Galleries
+# plugins
+	- Jetpack infinite scroll
+# Utilities
+	- Accessibility
+	- Alignments
+
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Generic
+--------------------------------------------------------------*/
+
+/* Normalize
+--------------------------------------------- */
+
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+	 ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+	line-height: 1.15;
+	-webkit-text-size-adjust: 100%;
+}
+
+/* Sections
+	 ========================================================================== */
+
+/**
+ * Remove the margin in all browsers.
+ */
+
+
+html {
+    box-sizing: border-box;
+    font-family: sans-serif; /* 1 */
+    -ms-text-size-adjust: 100%; /* 2 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+* {max-height: 1000000px;}
+
+/**
+* Remove default margin.
+*/
+
+body {
+    margin: 0;
+}
+
+/* HTML5 display definitions
+    ========================================================================== */
+/**
+* Correct `block` display not defined for any HTML5 element in IE 8/9.
+* Correct `block` display not defined for `details` or `summary` in IE 10/11
+* and Firefox.
+* Correct `block` display not defined for `main` in IE 11.
+*/
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+    display: block;
+}
+
+/**
+* 1. Correct `inline-block` display not defined in IE 8/9.
+* 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+*/
+
+audio,
+canvas,
+progress,
+video {
+    display: inline-block; /* 1 */
+    vertical-align: baseline; /* 2 */
+}
+
+/**
+* Prevent modern browsers from displaying `audio` without controls.
+* Remove excess height in iOS 5 devices.
+*/
+
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+
+/**
+* Address `[hidden]` styling not present in IE 8/9/10.
+* Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
+*/
+
+[hidden],
+template {
+    display: none;
+}
+
+/* Links
+    ========================================================================== */
+/**
+* Remove the gray background color from active links in IE 10.
+*/
+
+a {
+    background-color: transparent;
+}
+
+/**
+* Improve readability of focused elements when they are also in an
+* active/hover state.
+*/
+
+a:active,
+a:hover {
+    outline: 0;
+}
+
+/* Text-level semantics
+    ========================================================================== */
+/**
+* Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+*/
+
+abbr[title] {
+    border-bottom: 1px dotted;
+}
+
+/**
+* Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+*/
+
+b,
+strong {
+    font-weight: bold;
+}
+
+/**
+* Address styling not present in Safari and Chrome.
+*/
+
+dfn {
+    font-style: italic;
+}
+
+/**
+* Address variable `h1` font-size and margin within `section` and `article`
+* contexts in Firefox 4+, Safari, and Chrome.
+*/
+
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+
+/**
+* Address styling not present in IE 8/9.
+*/
+
+mark {
+    background: #ff0;
+    color: #000;
+}
+
+/**
+* Address inconsistent and variable font size in all browsers.
+*/
+
+small {
+    font-size: 80%;
+}
+
+/**
+* Prevent `sub` and `sup` affecting `line-height` in all browsers.
+*/
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+/* Embedded content
+    ========================================================================== */
+/**
+* Remove border when inside `a` element in IE 8/9/10.
+*/
+
+img {
+    border: 0;
+}
+
+/**
+* Correct overflow not hidden in IE 9/10/11.
+*/
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+/* Grouping content
+    ========================================================================== */
+/**
+* Address margin not present in IE 8/9 and Safari.
+*/
+
+figure {
+    margin: 1em 40px;
+}
+
+/**
+* Address differences between Firefox and other browsers.
+*/
+
+hr {
+    box-sizing: content-box;
+    height: 0;
+}
+
+/**
+* Contain overflow in all browsers.
+*/
+
+pre {
+    overflow: auto;
+}
+
+/**
+* Address odd `em`-unit font size rendering in all browsers.
+*/
+
+code,
+kbd,
+pre,
+samp {
+    font-family: monospace, monospace;
+    font-size: 1em;
+}
+
+/* Forms
+    ========================================================================== */
+/**
+* Known limitation: by default, Chrome and Safari on OS X allow very limited
+* styling of `select`, unless a `border` property is set.
+*/
+/**
+* 1. Correct color not being inherited.
+*    Known issue: affects color of disabled elements.
+* 2. Correct font properties not being inherited.
+* 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+*/
+button,
+input,
+optgroup,
+select,
+textarea {
+    color: inherit; /* 1 */
+    font: inherit; /* 2 */
+    margin: 0; /* 3 */
+}
+
+/**
+* Address `overflow` set to `hidden` in IE 8/9/10/11.
+*/
+
+button {
+    overflow: visible;
+}
+
+/**
+* Address inconsistent `text-transform` inheritance for `button` and `select`.
+* All other form control elements do not inherit `text-transform` values.
+* Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+* Correct `select` style inheritance in Firefox.
+*/
+
+button,
+select {
+    text-transform: none;
+}
+
+/**
+* 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+*    and `video` controls.
+* 2. Correct inability to style clickable `input` types in iOS.
+* 3. Improve usability and consistency of cursor style between image-type
+*    `input` and others.
+*/
+
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+    -webkit-appearance: button; /* 2 */
+    cursor: pointer; /* 3 */
+}
+
+/**
+* Re-set default cursor for disabled elements.
+*/
+
+button[disabled],
+html input[disabled] {
+    cursor: default;
+}
+
+/**
+* Remove inner padding and border in Firefox 4+.
+*/
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+/**
+* Address Firefox 4+ setting `line-height` on `input` using `!important` in
+* the UA stylesheet.
+*/
+
+input {
+    line-height: normal;
+}
+
+/**
+* It's recommended that you don't attempt to style these elements.
+* Firefox's implementation doesn't respect box-sizing, padding, or width.
+*
+* 1. Address box sizing set to `content-box` in IE 8/9/10.
+* 2. Remove excess padding in IE 8/9/10.
+*/
+
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box; /* 1 */
+    padding: 0; /* 2 */
+}
+
+/**
+* Fix the cursor style for Chrome's increment/decrement buttons. For certain
+* `font-size` values of the `input`, it causes the cursor style of the
+* decrement button to change from `default` to `text`.
+*/
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    height: auto;
+}
+
+/**
+* 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+* 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
+*/
+
+input[type="search"] {
+    -webkit-appearance: textfield; /* 1 */
+    box-sizing: content-box; /* 2 */
+}
+
+/**
+* Remove inner padding and search cancel button in Safari and Chrome on OS X.
+* Safari (but not Chrome) clips the cancel button when the search input has
+* padding (and `textfield` appearance).
+*/
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+/**
+* Define consistent border, margin, and padding.
+*/
+
+fieldset {
+    border: 1px solid #C0C0C0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+* 1. Correct `color` not being inherited in IE 8/9/10/11.
+* 2. Remove padding so people aren't caught out if they zero out fieldsets.
+*/
+
+legend {
+    border: 0; /* 1 */
+    padding: 0; /* 2 */
+}
+
+/**
+* Remove default vertical scrollbar in IE 8/9/10/11.
+*/
+
+textarea {
+    overflow: auto;
+}
+
+/**
+* Don't inherit the `font-weight` (applied by a rule above).
+* NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+*/
+
+optgroup {
+    font-weight: bold;
+}
+
+/* Tables
+    ========================================================================== */
+/**
+* Remove most spacing between table cells.
+*/
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td,
+th {
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.gm-style img {
+    max-width: none
+}
+
+.srOnly {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+body {
+    font-size: 20px;
+    line-height: 35px;
+    color: #6C6C6C;
+    font-family: 'Roboto', 'Arial', 'Helvetica', sans-serif;
+    background-color: #fff;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+    margin: 0;
+    font-weight: 900;
+    line-height: 55px;
+    color: #1270ED;
+}
+
+h1,
+.h1 {
+    font-size: 60px;
+}
+
+h2,
+.h2 {
+    font-size: 55px;
+}
+
+h3,
+.h3 {
+    font-size: 45px;
+}
+
+h4,
+.h4 {
+    font-size: 40px;
+}
+
+h5,
+.h5 {
+    font-size: 35px;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="search"],
+input[type="password"],
+textarea,
+select {
+    -webkit-appearance: none;
+    box-sizing: border-box;
+    color: #9F9E9E;
+    -webkit-transition: border-color .3s ease;
+    transition: border-color .3s ease;
+    font-size: 20px;
+    line-height: 40px;
+    padding: 15px 27px;
+    height: 57px;
+    background-color: #FFFFFF;
+    border: 0;
+    border-radius: 15px;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+input[type="search"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+    box-shadow: none;
+}
+
+input[type="text"]::-webkit-input-placeholder,
+input[type="tel"]::-webkit-input-placeholder,
+input[type="email"]::-webkit-input-placeholder,
+input[type="search"]::-webkit-input-placeholder,
+input[type="password"]::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder,
+select::-webkit-input-placeholder {
+    color: #B7B7B7;
+}
+
+input[type="text"]::-moz-placeholder,
+input[type="tel"]::-moz-placeholder,
+input[type="email"]::-moz-placeholder,
+input[type="search"]::-moz-placeholder,
+input[type="password"]::-moz-placeholder,
+textarea::-moz-placeholder,
+select::-moz-placeholder {
+    opacity: 1;
+    color: #B7B7B7;
+}
+
+input[type="text"]:-moz-placeholder,
+input[type="tel"]:-moz-placeholder,
+input[type="email"]:-moz-placeholder,
+input[type="search"]:-moz-placeholder,
+input[type="password"]:-moz-placeholder,
+textarea:-moz-placeholder,
+select:-moz-placeholder {
+    color: #B7B7B7;
+}
+
+input[type="text"]:-ms-input-placeholder,
+input[type="tel"]:-ms-input-placeholder,
+input[type="email"]:-ms-input-placeholder,
+input[type="search"]:-ms-input-placeholder,
+input[type="password"]:-ms-input-placeholder,
+textarea:-ms-input-placeholder,
+select:-ms-input-placeholder {
+    color: #B7B7B7;
+}
+
+input[type="text"].placeholder,
+input[type="tel"].placeholder,
+input[type="email"].placeholder,
+input[type="search"].placeholder,
+input[type="password"].placeholder,
+textarea.placeholder,
+select.placeholder {
+    color: #B7B7B7;
+}
+
+textarea:focus,
+input:focus{
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+    vertical-align: top;
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="file"],
+input[type="submit"] {
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+
+/* Slider */
+
+.slick-slider {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.slick-list:focus {
+    outline: none;
+}
+
+.slick-list.dragging {
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+    -webkit-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+}
+
+.slick-track:before,
+.slick-track:after {
+    display: table;
+    content: "";
+}
+
+.slick-track:after {
+    clear: both;
+}
+
+.slick-loading .slick-track {
+    visibility: hidden;
+}
+
+.slick-slide {
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+}
+
+[dir="rtl"] .slick-slide {
+    float: right;
+}
+
+.slick-slide img {
+    display: block;
+}
+
+.slick-slide.slick-loading img {
+    display: none;
+}
+
+.slick-slide.dragging img {
+    pointer-events: none;
+}
+
+.slick-initialized .slick-slide {
+    display: block;
+}
+
+.slick-loading .slick-slide {
+    visibility: hidden;
+}
+
+.slick-vertical .slick-slide {
+    display: block;
+    height: auto;
+    border: 1px solid transparent;
+}
+
+.slick-arrow.slick-hidden {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    margin: 0;
+    letter-spacing: 0;
+}
+
+.bgCover {
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.container {
+    max-width: 1254px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.listUnstyled {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.chCol6 {
+    width: 100%;
+}
+
+.chCol12 {
+    width: 100%;
+}
+
+.btn {
+    font-size: 20px;
+    color: #fff;
+    padding: 8px 10px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    line-height: 42px;
+    border: 3px solid #082CD4;
+    border-radius: 35px;
+    transition: color .3s ease, background-color .3s ease, border-color .3s ease;
+}
+
+.btnBgBlue {
+    background-color: #082CD4;
+}
+
+.btnBgBlue:hover {
+    background-color: #C38177;
+    color: #fff;
+    border-color: #C38177;
+}
+
+.btnBorderBlue {
+    background-color: #fff;
+    color: #082CD4;
+}
+
+.btnBorderBlue:hover {
+    color: #C38177;
+    border-color: #C38177;
+}
+
+.btnDefaultWidth {
+    min-width: 183px;
+}
+
+.btnBgWhite {
+    background-color: #fff;
+    color: #1270ED;
+    border-color: #fff;
+}
+
+.btnBgWhite:hover {
+    background-color: #C38177;
+    color: #fff;
+}
+
+.btnWhiteSecondary {
+    background-color: #fff;
+    min-width: 172px;
+    color: #082CD4;
+    font-weight: 700;
+    border-color: #fff;
+}
+
+.btnWhiteSecondary:hover {
+    background-color: #082CD4;
+    border-color: #082CD4;
+    color: #fff;
+}
+
+.colsHolder {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -20px;
+    margin-right: -20px;
+}
+
+.colsHolder > .chCol {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.alignHolder {
+    width: 100%;
+    display: flex;
+    min-height: inherit;
+    align-items: center;
+}
+
+.align {
+    width: 100%;
+}
+
+#pageWrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+#pageHeader {
+    position: relative;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    background-color: #1270ED;
+    border-bottom: 1px solid #707070;
+}
+
+#pageNav {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    max-width: 143px;
+}
+
+.pageNavCollapse {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 111%;
+    transform: scaleY(0);
+    transform-origin: 0 0 0;
+    transition: transform .3s ease;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    z-index: 1;
+}
+
+.mainNavigation {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.pgNavOpener {
+    display: block;
+    position: relative;
+    color: #fff;
+    width: 30px;
+    height: 28px;
+}
+
+.pgNavOpener .icnBar {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    right: 0;
+}
+
+.pgNavOpener:before,
+.pgNavOpener:after,
+.pgNavOpener .icnBar {
+    height: 4px;
+    background-color: currentColor;
+    transition: all .3s ease;
+    border-radius: 3px;
+}
+
+.pgNavOpener:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.pgNavOpener:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 5px;
+    left: 0;
+}
+
+.pgNavActive .pgNavOpener::before {
+    transform: rotate(45deg) translate(7px, 6px);
+}
+
+.pgNavActive .pgNavOpener::after {
+    transform: rotate(-45deg) translate(8px, -7px);
+}
+
+.pgNavActive .pgNavOpener .icnBar {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.pgNavActive .pageNavCollapse {
+    transform: scaleY(1);
+}
+
+.mainNavigation {
+    font-size: 16px;
+    padding-bottom: 50px;
+    padding-top: 20px;
+}
+
+.mainNavigation > li {
+    padding-bottom: 7px;
+    border-bottom: 1px solid #fff;
+}
+
+.mainNavigation > li + li {
+    margin-top: 10px;
+}
+
+.mainNavigation > li > a {
+    color: #fff;
+    font-weight: 500;
+    line-height: 22px;
+    text-transform: uppercase;
+}
+
+.mainNavigation > li > a:hover {
+    color: #C38177;
+}
+
+.menu-item-has-children {
+    position: relative;
+}
+
+.sub-menu {
+    background-color: #DBE6F2;
+    padding: 19px 12px;
+    position: absolute;
+    left: -20px;
+    right: -30px;
+    top: 62px;
+    display: none;
+    list-style: none;
+    text-align: left;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.sub-menu:before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 35px;
+    left: 0;
+    right: 0;
+    top: -35px;
+}
+
+.sub-menu > li > a {
+    font-size: 15px;
+    color: #1270ED;
+    font-weight: 500;
+}
+
+.sub-menu > li > a:hover {
+    color: #C38177;
+}
+
+.menu-item-has-children:hover  .sub-menu {
+    display: block;
+}
+
+#pageFooter {
+    background-color: #1270ED;
+    padding-top: 24px;
+    padding-bottom: 35px;
+}
+
+.ftLogo {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+    max-width: 193px;
+}
+
+.ftNavList > li a {
+    color: #fff;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.ftNavList > li a:hover {
+    color: #C38177;
+}
+
+.homeInfoSection .chCol7,
+.homeInfoSection .chCol5{
+    width: 100%;
+}
+
+.dbInfoTextDescr {
+    line-height: 30px;
+    color: #000;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.dbInfoTextDescr .subHeading {
+    font-size: 15px;
+    display: block;
+    letter-spacing: 3px;
+    line-height: 30px;
+    color: #C38177;
+    font-weight: 700;
+    margin-bottom: -4px;
+}
+
+.dbInfoTextDescr h1,
+.dbInfoTextDescr .h1 {
+    font-size: 27px;
+    margin-bottom: 5px;
+    line-height: 35px;
+}
+
+.dbInfoTextDescr strong {
+    font-size: 22px;
+    line-height: 25px;
+    color: #000;
+    margin-bottom: 21px;
+    display: block;
+}
+
+.dbInfoTextDescr p {
+    margin-bottom: 30px;
+}
+
+.infoBtnWrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.infoBtnWrap .btn {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.homeInfoSection {
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.infoImageHolder {
+    margin-left: -20px;
+    margin-right: -20px;
+}
+
+.infoBtnWrap .btnDefaultWidth {
+    min-width: 167px;
+    line-height: 38px;
+    margin-bottom: 15px;
+}
+
+.infoImageHolder img {
+    width: 100%;
+}
+
+.sebBusinessNeed {
+    padding-top: 50px;
+    padding-bottom: 230px;
+    position: relative;
+}
+
+.sebNeedHeader {
+    text-align: center;
+}
+
+.sebNeedHeader h2,
+.sebNeedHeader .h2 {
+    font-size: 40px;
+    line-height: 45px;
+    margin-bottom: 25px;
+    color: #092DD4;
+}
+
+.sebNeedDescriptionWrap .gsStartBtn,
+.dbDevelopTextDescr.sebNeedDescriptionWrap .gsStartBtn {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 42px;
+}
+
+.sebNeedDescriptionWrap {
+    color: #fff;
+    padding-top: 100px;
+    font-size: 17px;
+    line-height: 27px;
+    text-align: center;
+}
+
+.sebNeedDescriptionWrap h3,
+.sebNeedDescriptionWrap .h3 {
+    font-size: 27px;
+    line-height: 37px;
+    color: #fff;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.sebNeedDescriptionWrap p {
+    margin-bottom: 16px;
+}
+
+.sebNeedDescriptionWrap .linkBtn {
+    color: #fff;
+    max-width: 183px;
+    text-align: center;
+    font-size: 16px;
+    display: none;
+}
+
+.sebNeedDescriptionWrap .linkBtn:hover {
+    color: #C38177;
+}
+
+.sebBusinessNeed .chCol7 {
+    width: 100%;
+}
+
+.sebBusinessNeed .chCol5 {
+    width: 100%;
+}
+
+.sebBusinessNeed .colsHolder {
+    margin-left: -4px;
+    margin-right: -4px;
+}
+
+.sebBusinessNeed .colsHolder .chCol{
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.csSecretarySec {
+    position: relative;
+    padding-bottom: 260px;
+    background: transparent linear-gradient(180deg, #FEFFFF 0%, #C8DCF5 100%) 0% 0% no-repeat padding-box;
+}
+
+.csSecretarySec .colsHolder {
+    margin-left: -40px;
+    margin-right: -40px;
+}
+
+.csSecretarySec .colsHolder .chCol {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.csSecretaryTextDescr {
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    padding-top: 35px;
+}
+
+.csSecretaryTextDescr h2,
+.csSecretaryTextDescr .h2 {
+    font-size: 35px;
+    line-height: 30px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.csSecretaryTextDescr p {
+    margin-bottom: 20px;
+}
+
+.atAccountDescrWrap {
+    max-width: 408px;
+}
+
+.dbDevelopBussinesSec {
+    position: relative;
+    padding-top: 220px;
+    padding-bottom: 75px;
+    margin-top: -110px;
+}
+
+.dbBusinessImage {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.dbBusinessImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sebNeedDescriptionWrap.dbDevelopTextDescr {
+    background: rgba(8, 44, 212, 0.5);
+    max-width: 376px;
+    border-radius: 0;
+    padding: 46px 17px 15px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 15px;
+    line-height: 22px;
+}
+
+.dbTextHeader strong{
+    font-size: 16px;
+    letter-spacing: 3.4px;
+    line-height: 30px;
+    display: block;
+    margin-bottom: 7px;
+    text-transform: uppercase;
+}
+
+.dbTextHeader h2,
+.dbTextHeader .h2 {
+    font-size: 30px;
+    line-height: 50px;
+    color: #fff;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.dbTextHeader h2:before,
+.dbTextHeader .h2:before {
+    position: absolute;
+    content: "";
+    height: 1px;
+    width: 265px;
+    background-color: #C38177;
+    left: 0;
+    bottom: 0;
+}
+
+.tsTestimonialSec {
+    background-color: #F7F7F7;
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+
+.tsTestimonialSec .imageHolder {
+    text-align: center;
+}
+
+.testiHeader {
+    text-align: center;
+}
+
+.testiHeader h2,
+.testiHeader .h2 {
+    font-size: 40px;
+    line-height: 65px;
+    margin-bottom: 30px;
+}
+
+.faqQuestionSec .testiHeader {
+    margin-bottom: 80px;
+}
+
+.faqQuestionSec .testiHeader h2,
+.faqQuestionSec .testiHeader .h2 {
+    margin-bottom: 0;
+}
+
+.clientFeedBackDescr {
+    border-radius: 29px;
+    padding: 21px 22px 29px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.clientFeedBackDescr .imgHolder {
+    width: 128px;
+    height: 128px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 24px;
+}
+
+.clientFeedBackDescr .imgHolder img {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.clientFeedBackDescr .clientReview {
+    margin: 0 0 30px 0;
+    font-size: 17px;
+    line-height: 30px;
+}
+
+.clientFeedBackDescr .clientReview q:before,
+.clientFeedBackDescr .clientReview q:after {
+    display: none;
+}
+
+.clientFeedBackDescr .clientReview q p {
+    height: 275px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 9;
+    -webkit-box-orient: vertical;
+    color: #5F5C5C;
+}
+
+.ratingStarsList {
+    display: flex;
+    justify-content: center;
+    margin-left: -4px;
+    margin-right: -4px;
+    margin-bottom: 10px;
+}
+
+.ratingStarsList > li {
+    padding-left: 4px;
+    padding-right: 4px;
+    color: #1270ED;
+}
+
+.clientFeedBackDescr h3,
+.clientFeedBackDescr .h3 {
+    font-size: 20px;
+    line-height: 30px;
+    color: #C38177;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.clientFeedBackDescr h4,
+.clientFeedBackDescr .h4 {
+    font-size: 17px;
+    line-height: 30px;
+    color: #5F5C5C;
+    font-weight: 400;
+}
+
+.slick-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    list-style: none;
+}
+
+.slick-dots > li {
+    width: 14px;
+    height: 14px;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.slick-dots > li button {
+    text-indent: -9999px;
+    background-color: #DBE6F2;
+    border: 0;
+    border-radius: 100%;
+    width: 14px;
+    height: 14px;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.slick-dots > li.slick-active button {
+    background-color: #082CD4;
+}
+
+.sliderDescr {
+    padding-left: 17px;
+    padding-right: 17px;
+}
+
+.whatWeDoSec {
+    padding-top: 50px;
+    padding-bottom: 220px;
+}
+
+.weDoDescrWrap {
+    text-align: center;
+    max-width: 337px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 40px;
+}
+
+.weDoDescrWrap .imgHolder {
+    margin-bottom: 40px;
+}
+
+.weDoDescrWrap h3,
+.weDoDescrWrap .h3 {
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 20px;
+    height: 62px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.ameAccountingSec {
+    background-color: #DBE6F2;
+    padding-top: 70px;
+    padding-bottom: 80px;
+}
+
+.ameHeader {
+    font-size: 18px;
+    line-height: 55px;
+    color: #C38177;
+    margin-bottom: 80px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.ameHeader h2,
+.ameHeader .h2 {
+    font-size: 45px;
+    line-height: 50px;
+    text-transform: capitalize;
+}
+
+.ameProcessList > li {
+    position: relative;
+    padding-left: 60px;
+}
+
+.ameProcessList li .countingNumber {
+    font-size: 60px;
+    color: #1270ED;
+    font-weight: 900;
+    margin-bottom: 25px;
+    display: block;
+}
+
+.ameProcessList > li h3,
+.ameProcessList > li .h3 {
+    font-size: 25px;
+    line-height: 30px;
+    color: #000;
+}
+
+.syStartJourneySec .ameProcessList > li h3,
+.syStartJourneySec .ameProcessList > li .h3 {
+    font-size: 25px;
+    line-height: 35px;
+    color: #000;
+    margin-bottom: 35px;
+}
+
+.scConfusedSec {
+    padding-top: 110px;
+    padding-bottom: 17px;
+    position: relative;
+}
+
+.scConfusedTextDescr {
+    max-width: 352px;
+    margin-left: auto;
+    text-align: center;
+    font-size: 18px;
+    line-height: 28px;
+    color: #707070;
+}
+
+.scConfusedTextDescr strong {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.scConfusedTextDescr h2,
+.scConfusedTextDescr .h2 {
+    font-size: 28px;
+    line-height: 40px;
+    margin-bottom: 10px;
+    color: #082CD4;
+}
+
+.scConfusedTextDescr .borderLine {
+    width: 3px;
+    height: 67px;
+    background-color: #C38177;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.caCredCorpSec {
+    padding-top: 20px;
+    padding-bottom: 75px;
+}
+
+.caCredCorpSec .imageHolder {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.caCredCorpSec .testiHeader h2,
+.caCredCorpSec .testiHeader .h2 {
+    font-size: 35px;
+    line-height: 35px;
+    margin-bottom: 10px;
+}
+
+.caCredCorpSec .testiHeader {
+    margin-bottom: 60px;
+    line-height: 30px;
+}
+
+.caCredCorpSec .chCol3 {
+    width: 50%;
+}
+
+.logoImageHolder {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.scImage {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.scImage img {
+    width: 73%;
+}
+
+.accTextDescr .accSubHead {
+    display: block;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 3.4px;
+    color: #C38177;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.accTextDescr h2,
+.accTextDescr .h2 {
+    font-size: 38px;
+    line-height: 45px;
+    margin-bottom: 17px;
+}
+
+.accTextDescr {
+    color: #000;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.accountTopBanner {
+    padding-bottom: 50px;
+    position: relative;
+}
+
+.accTopBannerImage {
+    position: absolute;
+    right: 0;
+    bottom: -80px;
+    z-index: -1;
+    left: 0;
+    width: 100%;
+}
+
+.accTopBannerImage img {
+    width: 100%;
+}
+
+.accTabsList {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    margin-bottom: 100px;
+    position: relative;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.accTabsList:before {
+    position: absolute;
+    content: "";
+    bottom: -30px;
+    width: 100%;
+    height: 64px;
+    background-color: #082CD4;
+}
+
+.accTabsList > li + li {
+    padding-left: 8px;
+}
+
+.accTabsList > li > a {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    min-width: 131px;
+    padding: 13px 10px 40px;
+    background-color: #082CD4;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    display: inline-block;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.accTabsList > li > a:hover {
+    transform: translateY(-15px);
+}
+
+.accTabListWrap {
+    margin-top: 0;
+}
+
+.getReadybanner {
+    background-color: #EDEDED;
+    padding-top: 320px;
+    position: relative;
+}
+
+.getReadyTextDescr {
+    max-width: 330px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.getReadyTextDescr h2,
+.getReadyTextDescr .h2 {
+    letter-spacing: -0.55px;
+    color: #082CD4;
+    line-height: 55px;
+    margin-bottom: 45px;
+    font-size: 55px;
+}
+
+.readyTextWrap {
+    padding-top: 64px;
+    padding-bottom: 60px;
+    color: #fff;
+    font-size: 18px;
+    line-height: 28px;
+    position: relative;
+    z-index: 1;
+}
+
+.readyTextWrap:before {
+    position: absolute;
+    content: "";
+    left: -9999px;
+    right: -9999px;
+    top: 0;
+    bottom: 0;
+    background-color: #082CD4;
+    z-index: -1;
+}
+
+.readyTextWrap p {
+    margin-bottom: 12px;
+}
+
+.readyTextWrap .readyBannerBtn {
+    color: #082CD4;
+    font-weight: 700;
+    min-width: 227px;
+}
+
+.readyTextWrap .readyBannerBtn:hover {
+    color: #fff;
+    border-color: #C38177;
+}
+
+.readyBgImage {
+    position: absolute;
+    top: -84px;
+    left: 25px;
+    right: 25px;
+}
+
+.ocAcountServices {
+    padding-top: 67px;
+    position: relative;
+}
+
+.ocAcountServices:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    bottom: 70px;
+    background: transparent linear-gradient(-180deg, #FEFFFF 0%, #C8DCF5 100%) 0% 0% no-repeat padding-box;
+    height: 507px;
+    z-index: -1;
+}
+
+.ocAcountServices  .chCol4 {
+    width: 100%;
+}
+
+.ocAcountServices .testiHeader h2,
+.ocAcountServices .testiHeader .h2 {
+    letter-spacing: 0.8px;
+    line-height: 50px;
+    font-size: 35px;
+}
+
+.accServiceWrap {
+    margin-bottom: 50px;
+}
+
+.accServiceWrap h3,
+.accServiceWrap .h3 {
+    font-size: 20px;
+    line-height: 25px;
+    color: #000;
+    font-weight: 700;
+    height: 49px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    margin-bottom: 15px;
+    padding-left: 34px;
+}
+
+.accServiceList > li {
+    position: relative;
+    padding-left: 34px;
+}
+
+.accServiceList > li:before {
+    position: absolute;
+    content: "";
+    width: 5px;
+    height: 5px;
+    background-color: #000;
+    border-radius: 100%;
+    top: 16px;
+    left: 0;
+}
+
+.accServiceList > li + li {
+    margin-top: 10px;
+}
+
+.ocAccountBg {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+}
+
+.ocAccountBg img {
+    width: 100%;
+}
+
+.annualAccount {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.annualAccountHeader {
+    text-align: center;
+    max-width: 564px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    padding-bottom: 30px;
+    margin-bottom: 40px;
+}
+
+.annualAccountHeader:before {
+    position: absolute;
+    content: "";
+    width: 172px;
+    height: 2px;
+    background-color: #707070;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.annualAccountHeader h2,
+.annualAccountHeader .h2 {
+    font-size: 40px;
+    line-height: 65px;
+    margin-bottom: 15px;
+}
+
+.annualAccountTextDescr .annualSubHead {
+    display: block;
+    font-size: 12px;
+    letter-spacing: 2.4px;
+    line-height: 25px;
+    color: #C38177;
+    text-transform: uppercase;
+}
+
+.annualAccountTextDescr h3,
+.annualAccountTextDescr .h3 {
+    font-size: 40px;
+    line-height: 65px;
+    color: #000;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.accountPlanList {
+    font-size: 18px;
+    line-height: 25px;
+    color: #5F5C5C;
+    margin-bottom: 30px;
+}
+
+.accountPlanList > li {
+    position: relative;
+    padding-left: 20px;
+}
+
+.accountPlanList > li:before {
+    position: absolute;
+    content: "";
+    width: 8px;
+    height: 8px;
+    background-color: #000;
+    border-radius: 100%;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.accountPlanList > li + li {
+    margin-top: 15px;
+}
+
+.faqQuestions {
+    border-bottom: 1px solid #E5E5E5;
+    color: #000;
+    font-size: 16px;
+    line-height: 25px;
+    margin-bottom: 50px;
+    position: relative;
+    cursor: pointer;
+    background-color: #fff;
+    padding: 13px 15px;
+}
+
+.faqQuestions[open] summary {
+    margin-bottom: 40px;
+}
+
+.faqQuestions summary {
+    font-size: 18px;
+    color: #5F5C5C;
+    line-height: 23px;
+    margin-bottom: 30px;
+    max-width: 228px;
+    position: relative;
+}
+
+.faqQuestions summary:before {
+    position: absolute;
+    content: "\f053";
+    font-weight: 900;
+    font-family: "Font Awesome 6 Free";
+    right: -23px;
+    background-color: #1270ED;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(180deg);
+    font-size: 20px;
+}
+
+.faqQuestions[open] summary:before {
+    transform: rotate(270deg);
+}
+
+.faqQuestions p {
+    margin-bottom: 50px;
+}
+
+.faqQuestionSec .colsHolder {
+    margin-left: -41px;
+    margin-right: -41px;
+}
+
+.faqQuestionSec .colsHolder .chCol {
+    padding-left: 41px;
+    padding-right: 41px;
+}
+
+.faqQuestionSec {
+    padding-top: 20px;
+}
+
+.contactFormSec {
+    position: relative;
+    padding-top: 409px;
+    padding-bottom: 229px;
+}
+
+.contactFormSec:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: -630px;
+    height: 1691px;
+    background: transparent linear-gradient(180deg, #FEFFFF 0%, #C8DCF5 100%) 0% 0% no-repeat padding-box;
+    z-index: -1;
+}
+
+.contactFormSec .formSubmitbg {
+    position: absolute;
+    top: 0;
+    left: -120px;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.aboutFoundHeader .abFoundSubHead {
+    font-size: 15px;
+    line-height: 30px;
+    color: #C38177;
+    display: block;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.aboutFoundHeader h2,
+.aboutFoundHeader .h2 {
+    font-size: 40px;
+    line-height: 30px;
+}
+
+.aboutFoundHeader {
+    position: relative;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.aboutFoundHeader .abHeaderText {
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.aboutFoundHeader .abHeaderText:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    width: 263px;
+    height: 1px;
+    background-color: #C38177;
+    margin-left: auto;
+    margin-right: auto;
+    right: 0;
+}
+
+.aboutFoundTextDescr .aboutFoundHeader .abHeaderImg {
+    width: 162px;
+    height: 162px;
+    border-radius: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.aboutFoundTextDescr .aboutFoundHeader .abHeaderImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.aboutFoundTextDescr h3,
+.aboutFoundTextDescr .h3 {
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 30px;
+}
+
+.aboutFoundTextDescr {
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.aboutFoundTextDescr p {
+    margin-bottom: 25px;
+}
+
+.aboutFounderDescrSec {
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+
+.abFounderText {
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.abFounderText p + p {
+    margin-top: 30px;
+}
+
+.aboutFounderDescrSec .colsHolder {
+    margin-left: -37px;
+    margin-right: -37px;
+}
+
+.aboutFounderDescrSec .colsHolder .chCol {
+    padding-left: 37px;
+    padding-right: 37px;
+}
+
+.aboutOurPlanSec {
+    padding-top: 70px;
+    padding-bottom: 220px;
+    background-color: #F8F8F8;
+}
+
+.aboutOurplanTextDescr {
+    text-align: center;
+}
+
+.formHeader {
+    font-size: 25px;
+    line-height: 35px;
+    color: #707070;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.formHeader h2,
+.formHeader .h2 {
+    font-size: 45px;
+    line-height: 50px;
+    color: #082CD4;
+    margin-bottom: 28px;
+}
+
+.submitFormWrap {
+    max-width: 333px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+.cnctFormWrap .chCol12 {
+    width: 100%;
+}
+
+.cnctFormWrap .colsHolder  {
+    margin-left: -6px;
+    margin-right: -6px;
+}
+
+.cnctFormWrap .colsHolder .chCol{
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+.formGroup .formControl {
+    width: 100%;
+    font-size: 20px;
+    height: 63px;
+    line-height: 40px;
+}
+
+.formGroup {
+    margin-bottom: 13px;
+}
+
+.formGroup textarea.formControl {
+    height: 167px;
+    resize: none;
+}
+
+.ctnSubmitBtnWrap {
+    display: flex;
+    justify-content: center;
+}
+
+.ctnSubmitBtnWrap .btnDefaultWidth {
+    min-width: 159px;
+    font-weight: 700;
+}
+
+.aboutOurplanTextDescr .imgHolder {
+    margin-bottom: 40px;
+}
+
+.aboutOurplanTextDescr h2,
+.aboutOurplanTextDescr .h2 {
+    font-size: 40px;
+    line-height: 30px;
+    margin-bottom: 35px;
+}
+
+.aboutOurplanTextDescr {
+    line-height: 30px;
+    color: #707070;
+    margin-bottom: 100px;
+}
+
+.abValueDescr {
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.abValueDescr .imgHolder {
+    margin-bottom: 15px;
+    position: relative;
+    padding-top: 206px;
+}
+
+.abValueDescr .imgHolder img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.abValueDescr h3,
+.abValueDescr .h3 {
+    font-size: 25px;
+    line-height: 30px;
+    color: #000;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.abValuesSec .chCol4 {
+    width: 100%;
+}
+
+.abValuesSec {
+    padding-top: 115px;
+    padding-bottom: 60px;
+}
+
+.csCorporateTopSec {
+    position: relative;
+    z-index: 1;
+}
+
+.csCorporateTopBanner {
+    position: relative;
+    font-size: 20px;
+    line-height: 30px;
+    color: #fff;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.csCorporateTopBanner h2,
+.csCorporateTopBanner .h2 {
+    color: #fff;
+    font-size: 40px;
+    line-height: 45px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.csCorporateTopBanner p {
+    margin-bottom: 30px;
+}
+
+.csCorpTopImage {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -120px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.csCorpTopImage img {
+    width: 100%;
+}
+
+.corporatNeedHeader h2,
+.corporatNeedHeader .h2 {
+    font-size: 38px;
+    line-height: 50px;
+    margin-bottom: 20px;
+}
+
+.corporatNeedHeader {
+    font-size: 20px;
+    line-height: 30px;
+    color: #525151;
+    max-width: 746px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.helpDetailsDescrWrap {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.helpDetailsDescrWrap .imgHolder {
+    min-width: 270px;
+}
+
+.helpDetailsDescrWrap .textDecription h3,
+.helpDetailsDescrWrap .textDecription .h3 {
+    font-size: 25px;
+    line-height: 30px;
+    color: #000;
+    margin-bottom: 5px;
+}
+
+.helpDetailsDescrWrap .textDecription {
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 85px;
+}
+
+.corporatNeedHelpSec {
+    padding-top: 60px;
+    padding-bottom: 140px;
+}
+
+.clientTrustSpecsSec {
+    padding-top: 30px;
+    background: transparent linear-gradient(180deg, #EDF5FF 0%, #FEFFFF 100%) 0% 0% no-repeat padding-box;
+}
+
+.ctTextDescrWrap h3,
+.ctTextDescrWrap .h3 {
+    font-size: 25px;
+    line-height: 30px;
+    color: #000;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.ctTextDescrWrap {
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 70px;
+    text-align: center;
+}
+
+.ctTextDescrWrap .icnImageWrap {
+    display: block;
+    margin-bottom: 37px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 110px;
+    height: 110px;
+}
+
+.clientTrustSpecsSec  .colsHolder {
+    margin-left: -45px;
+    margin-right: -45px;
+}
+
+.clientTrustSpecsSec  .colsHolder .chCol {
+    padding-left: 45px;
+    padding-right: 45px;
+}
+
+.canDoTextDescr {
+    text-align: center;
+    padding-top: 45px;
+}
+
+.canDoTextDescr h2,
+.canDoTextDescr .h2 {
+    font-size: 35px;
+    line-height: 35px;
+    max-width: 493px;
+    margin-left: auto;
+    margin-bottom: 40px;
+}
+
+.canDoDetailList > li h3,
+.canDoDetailList > li .h3 {
+    font-size: 25px;
+    line-height: 30px;
+    color: #000;
+    margin-bottom: 15px;
+}
+
+.canDoDetailList > li {
+    font-size: 17px;
+    line-height: 28px;
+}
+
+.canDoDetailList > li + li {
+    margin-top: 30px;
+    border-top: 1px solid #082CD4;
+    padding-top: 35px;
+}
+
+.canDoCorporateSec {
+    padding-bottom: 60px;
+    position: relative;
+}
+
+.corpPriciningDetail {
+    background-color: #F4F2EC;
+    padding: 48px 20px 40px;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.corpPriciningDetail h3,
+.corpPriciningDetail .h3 {
+    font-size: 20px;
+    letter-spacing: 3px;
+    line-height: 50px;
+    color: #C38177;
+    font-weight: 400;
+}
+
+.corpPriciningDetail h4,
+.corpPriciningDetail .h4 {
+    font-size: 60px;
+    color: #082CD4;
+}
+
+.corpPriciningDetail h4 .monthPkg {
+    display: block;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+.pricingDetailList {
+    text-align: left;
+}
+
+.pricingDetailList > li{
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    line-height: 20px;
+    color: #707070;
+}
+
+.pricingDetailList > li p {
+    margin-left: 16px;
+}
+
+.pricingDetailList > li + li {
+    margin-top: 15px;
+}
+
+.corporatePricingSec .colsHolder {
+    margin-left: -12px;
+    margin-right: -12px;
+}
+
+.corporatePricingSec .colsHolder .chCol {
+    padding-left: 12px;
+    padding-right: 12px;
+    display: flex;
+}
+
+.corporatePricingSec .chCol4 {
+    width: 33.333%;
+}
+
+.corporatePricingSec {
+    position: relative;
+    padding-top: 40px;
+}
+
+.corporatePricingSec .bgCloudImage {
+    position: absolute;
+    top: 13px;
+    right: 0;
+    left: 0;
+    text-align: center;
+}
+
+.canDoCorporateSec .chCol:nth-child(1) {
+    margin-right: -50px;
+}
+
+.addCloudImgWrap img {
+    width: 100%;
+}
+
+.addServiceTable {
+    width: 100%;
+    text-align: left;
+}
+
+.addServiceTable > thead > tr > th,
+.addServiceTable > tbody > tr > td {
+    border: 2px solid #E3E3E3;
+    width: 33.333%;
+    padding: 11px 35px;
+}
+
+.addServiceTable > thead > tr > th:first-child {
+    border: 0;
+}
+
+.addServiceTable > thead > tr > th {
+    font-size: 18px;
+    line-height: 27px;
+    color: #000000;
+}
+
+.addServiceTable > tbody > tr > td:first-child {
+    font-size: 18px;
+    line-height: 20px;
+    color: #6C6C6C;
+}
+
+.addServiceTable > tbody > tr > td {
+    font-size: 20px;
+    line-height: 50px;
+    color: #1270ED;
+    font-weight: 700;
+}
+
+.addServiceTable > tbody > tr > td .serviceSubinfo {
+    display: block;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+}
+
+.additionAddServiceSec {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.dhNomineeSec {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background: transparent linear-gradient(180deg, #EDF5FF 0%, #FEFFFF 100%) 0% 0% no-repeat padding-box;
+}
+
+.dhNomineDescrWrap {
+    max-width: 972px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 27px;
+    padding: 100px 10px;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.dhNomineDescrWrap h2,
+.dhNomineDescrWrap .h2 {
+    font-size: 32px;
+    line-height: 43px;
+    max-width: 544px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 45px;
+}
+
+.dhNomineDescrWrap .imgHolder {
+    margin-bottom: 36px;
+}
+
+.dhNomineDirectHead h3,
+.dhNomineDirectHead .h3 {
+    font-size: 35px;
+    line-height: 65px;
+    color: #C38177;
+    font-weight: 700;
+}
+
+.dhNomineDirectHead h4,
+.dhNomineDirectHead .h4 {
+    font-size: 45px;
+    line-height: 65px;
+    color: #000;
+    font-weight: 700;
+}
+
+.dhNomineDirectHead {
+    position: relative;
+    margin-bottom: 36px;
+    padding-top: 11px;
+}
+
+.dhNomineDirectHead:before {
+    position: absolute;
+    content: "";
+    border: 1px solid #082CD4;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 165px;
+}
+
+.dhNomineDescrWrap p{
+    margin-bottom: 10px;
+    color: #5F5C5C;
+}
+
+.dhNomineDescrWrap p b {
+    color: #000000;
+    font-weight: 400;
+}
+
+.sslSingaporLocateSec {
+    padding-top: 100px;
+    padding-bottom: 50px;
+    background: transparent linear-gradient(180deg, #FEFFFF 0%, #EDF5FF 100%) 0% 0% no-repeat padding-box;
+}
+
+.sslLocateTopSec .align {
+    padding-bottom: 184px;
+}
+
+.sslLocateTextDescr strong {
+    display: block;
+    font-size: 18px;
+    line-height: 30px;
+    color: #000;
+    margin-bottom: 23px;
+}
+
+.sslLocateTextDescr h2,
+.sslLocateTextDescr .h2 {
+    font-size: 38px;
+    line-height: 50px;
+    margin-bottom: 23px;
+}
+
+.sslLocateTextDescr {
+    font-size: 18px;
+    line-height: 30px;
+    color: #525151;
+    text-align: center;
+}
+
+.sslLocateTextDescr p {
+    margin-bottom: 20px;
+}
+
+.sslSingaporLocateSec .chCol5 {
+    width: 100%;
+}
+
+.sslSingaporLocateSec .chCol7 {
+    width: 100%;
+}
+
+.sslLocateTextDescr .btn {
+    margin-top: 20px;
+}
+
+.proBusinessContent h2,
+.proBusinessContent .h2 {
+    font-size: 30px;
+    line-height: 55px;
+    color: #000;
+    margin-bottom: 27px;
+}
+
+.proBusinessContent strong {
+    font-size: 22px;
+    line-height: 35px;
+    color: #1270ED;
+    font-weight: 900;
+    display: block;
+    margin-bottom: 25px;
+}
+
+.proBusinessContent {
+    font-size: 18px;
+    line-height: 35px;
+    margin-bottom: 30px;
+}
+
+.proBuisnessText {
+    font-size: 18px;
+    line-height: 35px;
+}
+
+.proBuisnessText {
+    padding-top: 80px;
+}
+
+.proBuisnessText p + p {
+    margin-top: 25px;
+}
+
+.localBusinessEnvirContentWrap{
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background: transparent linear-gradient(180deg, #FEFFFF 0%, #C8DCF5 100%) 0% 0% no-repeat padding-box;
+}
+
+.ipPropertyProtecWrap {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.ipPropertyProtecWrap .colsHolder {
+    margin-left: -41px;
+    margin-right: -41px;
+}
+
+.ipPropertyProtecWrap .colsHolder .chCol {
+    padding-left: 41px;
+    padding-right: 41px;
+}
+
+.acFundingTextWrap .colsHolder {
+    margin-left: -48px;
+    margin-right: -48px;
+}
+
+.acFundingTextWrap .colsHolder .chCol {
+    padding-left: 48px;
+    padding-right: 48px;
+}
+
+.acFundingTextWrap .proBusinessContent h2,
+.acFundingTextWrap .proBusinessContent .h2 {
+    height: 95px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.conclBenifitWrap {
+    padding-top: 50px;
+    padding-bottom: 60px;
+    background-color: #1270ED;
+    position: relative;
+}
+
+.conclusionBgImage {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 40px;
+    width: 100%;
+}
+
+.conclusionBgImage img {
+    width: 100%;
+}
+
+.conclBenifitTextdescr {
+    font-size: 18px;
+    line-height: 35px;
+    color: #EDEDED;
+    text-align: center;
+}
+
+.conclBenifitTextdescr strong {
+    font-weight: 400;
+    display: block;
+    font-size: 25px;
+    line-height: 35px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.conclBenifitTextdescr p + p {
+    margin-top: 30px;
+}
+
+.conculHeader {
+    max-width: 559px;
+    margin-bottom: 60px;
+}
+
+.conculHeader h2,
+.conculHeader .h2 {
+    font-size: 45px;
+    line-height: 55px;
+    color: #fff;
+    font-weight: 100;
+}
+
+.conculHeader h3,
+.conculHeader .h3 {
+    font-size: 45px;
+    line-height: 50px;
+    color: #fff;
+}
+
+.inropHelpHeading {
+    max-width: 381px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+}
+
+.inropHelpHeading h2,
+.inropHelpHeading .h2 {
+    font-size: 50px;
+    line-height: 60px;
+    color: #082CD4;
+}
+
+.incropHelpSec {
+    padding-top: 90px;
+}
+
+.incropTextheader h3,
+.incropTextheader .h3 {
+    font-size: 20px;
+    line-height: 30px;
+    color: #C38177;
+    font-weight: 700;
+    margin-bottom: 10px;
+    max-width: 399px;
+    margin-left: auto;
+}
+
+.incropTextheader h4,
+.incropTextheader .h4 {
+    font-size: 35px;
+    line-height: 45px;
+}
+
+.incropTextheader {
+    position: relative;
+    padding-bottom: 30px;
+    margin-bottom: 70px;
+}
+
+.incropTextheader:before {
+    position: absolute;
+    content: "";
+    right: 0;
+    bottom: -20px;
+    border: 6px solid #1270ED;
+    width: 165px;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.incropHelpTextblock {
+    text-align: center;
+}
+
+.incropHelpText p {
+    margin-bottom: 20px;
+}
+
+.clientChoiceHeader {
+    position: relative;
+    padding-bottom: 58px;
+    text-align: center;
+    max-width: 583px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 90px;
+}
+
+.clientChoiceHeader:before {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid #1270ED;
+    width: 165px;
+}
+
+.clientChoiceHeader h2,
+.clientChoiceHeader .h2 {
+    font-size: 31px;
+    line-height: 40px;
+}
+
+.clientChoiceDescrWrap {
+    position: relative;
+    padding-top: 85px;
+}
+
+.clientChoiceImage {
+    position: absolute;
+    top: 4px;
+    right: -130px;
+}
+
+.clientChoiceImage img {
+    width: 69%;
+}
+
+.clientSpecsText {
+    font-size: 18px;
+    line-height: 30px;
+    color: #707070;
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.clientSpecsText h3,
+.clientSpecsText .h3 {
+    font-size: 25px;
+    line-height: 50px;
+    color: #000;
+}
+
+.clientContentWrap {
+    max-width: 1070px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 205px;
+}
+
+.clientContentWrap .colsHolder {
+    margin-left: -26px;
+    margin-right: -26px;
+    justify-content: center;
+}
+
+.clientSpecsText .icnImageWrap {
+    width: 110px;
+    height: 110px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+}
+
+.clientContentWrap .colsHolder .chCol{
+    padding-left: 26px;
+    padding-right: 26px;
+}
+
+.clientContentWrap .chCol12 {
+    width: 100%;
+}
+
+.clientChoiceBusinessWrap {
+    padding-bottom: 540px;
+    background: transparent linear-gradient(180deg, #FEFFFF 0%, #C8DCF5 100%) 0% 0% no-repeat padding-box;
+}
+
+.standardRquireSec {
+    background: transparent linear-gradient(180deg, #1647D9 0%, #3685E6 100%) 0% 0% no-repeat padding-box;
+    padding-top: 50px;
+    padding-bottom: 39px;
+    position: relative;
+}
+
+.srStandardRequireText {
+    color: #fff;
+    margin-left: auto;
+    font-size: 18px;
+    line-height: 25px;
+    padding-top: 33px;
+    padding-bottom: 33px;
+}
+
+.srStandardRequireText h2,
+.srStandardRequireText .h2 {
+    font-size: 45px;
+    line-height: 50px;
+    color: #fff;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.standRequireList > li {
+    position: relative;
+    padding-left: 10px;
+}
+
+.standRequireList > li:before{
+    position: absolute;
+    content: "";
+    left: -10px;
+    top: 10px;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: #fff;
+}
+
+.standRequireList > li + li {
+    margin-top: 30px;
+}
+
+.standImageHolder{
+    text-align: center;
+    margin: -486px -225px 0 -185px;
+}
+
+.standImageHolder img {
+    width: 100%;
+}
+
+.preIncroDescrWrap {
+    padding-top: 85px;
+    padding-bottom: 55px;
+}
+
+.preIncroHeader {
+    font-size: 16px;
+    line-height: 23px;
+    color: #000;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.preIncroHeader h2,
+.preIncroHeader .h2 {
+    font-size: 28px;
+    line-height: 40px;
+    position: relative;
+    width: 100%;
+    text-align: right;
+    padding-right: 45px;
+    margin-bottom: 45px;
+}
+
+.preIncroHeader strong {
+    width: 100%;
+}
+
+.preIncroHeader h2:before,
+.preIncroHeader .h2:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    width: 8px;
+    height: 96px;
+    background-color: #1270ED;
+}
+
+.preIncroHeader .preIncroText {
+    text-align: right;
+}
+
+.preQuestionTextWrap {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.preQuestionTextWrap h3,
+.preQuestionTextWrap .h3 {
+    font-size: 27px;
+    line-height: 33px;
+    color: #C38177;
+}
+
+.preIncroDescrWrap .chCol4 {
+    width: 100%;
+}
+
+.preIncroDescrWrap .colsHolder {
+    margin-left: -50px;
+    margin-right: -50px;
+}
+
+.preIncroDescrWrap .colsHolder .chCol {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.syStartJourneySec {
+    background-color: #F0F0F0;
+}
+
+.syStartJourneySec .ameHeader {
+    position: relative;
+    padding-bottom: 30px;
+    max-width: 675px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.syStartJourneySec .ameHeader:before {
+    position: absolute;
+    content: "";
+    bottom: -10px;
+    left: 0;
+    width: 293px;
+    height: 10px;
+    background-color: #1270ED;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.syStartJourneySec .ameProcessList > li + li:before {
+    left: 100px;
+}
+
+.syStartJourneySec .chCol6:first-child {
+    width: 100%;
+}
+
+.syStartJourneySec .chCol6 {
+    width: 100%;
+}
+
+.syStartJourneySec .ameProcessList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.syStartJourneySec .ameProcessList > li{
+    font-size: 18px;
+    line-height: 32px;
+    color: #707070;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+}
+
+.syStartJourneySec .ameProcessList > li +li {
+    margin-top: 60px;
+}
+
+.syStartJourneySec .ameProcessList > li strong {
+    margin-top: 10px;
+    display: block;
+    margin-bottom: 7px;
+}
+
+.syStartJourneySec .formDetailList li  .listTextWrap{
+    position: relative;
+}
+
+.syStartJourneySec .formDetailList > li .listTextWrap:after {
+    position: absolute;
+    content: "";
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+    background-color: #707070;
+}
+
+.syStartJourneySec .ameProcessList > li .formDetailList {
+    margin-bottom: 35px;
+}
+
+.otTeamExperirenseWrap {
+    padding-top: 70px;
+    padding-bottom: 470px;
+}
+
+.otTeamTextDescWrap h2,
+.otTeamTextDescWrap .h2 {
+    font-size: 26px;
+    line-height: 35px;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 36px;
+}
+
+.otTeamTextWrap {
+    text-align: center;
+    line-height: 30px;
+    color: #707070;
+    margin-bottom: 50px;
+}
+
+.otTeamTextWrap h3,
+.otTeamTextWrap .h3 {
+    font-size: 24px;
+    line-height: 30px;
+    color: #000;
+    margin-bottom: 39px;
+}
+
+.otTeamTextDescWrap .chCol4 {
+    width: 100%;
+}
+
+.preIncroText strong {
+    display: block;
+}
+
+.preIncroText strong + strong {
+    margin-top: 15px;
+}
+
+.ipProcessSec {
+    position: relative;
+    padding-top: 70px;
+    padding-bottom: 48px;
+}
+
+.ipProcessImage {
+    position: absolute;
+    left: -8px;
+    top: -240px;
+    z-index: -1;
+}
+
+.ipProcessSec .preIncroText {
+    color: #fff;
+}
+
+.ipProcessSec .preIncroHeader h2,
+.ipProcessSec .preIncroHeader .h2 {
+    color: #fff;
+}
+
+.helpDetailsList > li {
+    position: relative;
+    padding-left: 80px;
+    font-size: 18px;
+    color: #707070;
+    line-height: 22px;
+}
+
+.helpDetailsList > li .countingNumber {
+    position: absolute;
+    content: "1";
+    left: 0;
+    top: 0;
+    font-size: 60px;
+    color: #1270ED;
+    font-weight: 900;
+}
+
+.helpDetailsList > li h2,
+.helpDetailsList > li .h2 {
+    font-size: 25px;
+    line-height: 30px;
+    color: #000;
+    margin-bottom: 16px;
+}
+
+.helpDetailsList > li + li {
+    margin-top: 100px;
+    border-top: 25px;
+}
+
+.helpDetailsList > li + li:after {
+    position: absolute;
+    content: "";
+    width: 78%;
+    height: 2px;
+    background-color: #1270ED;
+    top: -50px;
+    left: 80px;
+}
+
+.srReuiredList {
+    margin-top: 50px;
+    line-height: 25px;
+}
+
+.srReuiredList > li h3,
+.srReuiredList > li .h3 {
+    font-size: 20px;
+    line-height: 30px;
+    color: #082CD4;
+    margin-bottom: 10px;
+    font-weight: 700;
+    padding-left: 15px;
+    position: relative;
+}
+
+.srReuiredList > li h3:before,
+.srReuiredList > li .h3:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+    background-color: #082CD4;
+}
+
+.srReuiredList > li p {
+    margin-bottom: 10px;
+}
+
+.srReuiredList > li + li {
+    margin-top: 35px;
+}
+
+.ipProcessHelpDetails {
+    padding-top: 40px;
+    padding-bottom: 130px;
+}
+
+.businessPersonTextWrap {
+    text-align: right;
+    font-size: 40px;
+    line-height: 50px;
+    color: #fff;
+    position: relative;
+    padding-top: 40px;
+    padding-bottom: 100px;
+}
+
+.businessPersonTextWrap:before {
+    position: absolute;
+    content: "";
+    left: -9999px;
+    right: -9999px;
+    top: 0;
+    bottom: 0;
+    background-color: #082CD4;
+    z-index: -1;
+}
+
+.businessPersonTextWrap h2 span,
+.businessPersonTextWrap .h2 span {
+    display: block;
+    font-size: 80px;
+    margin-bottom: 65px;
+}
+
+.businessPersonTextWrap h2,
+.businessPersonTextWrap .h2 {
+    font-size: 150px;
+    line-height: 70px;
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 85px;
+}
+
+.buinessPersonNumberSec .colsHolder {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.buinessPersonNumberSec .colsHolder .chCol {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.buinessPersonNumberSec {
+    position: relative;
+}
+
+.businessPeopleImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.wnNextPlanSec {
+    background: transparent linear-gradient(180deg, #C8DCF5 0%, #FEFFFF 100%) 0% 0% no-repeat padding-box;
+    padding-top: 105px;
+    padding-bottom: 910px;
+}
+
+.wnNextheader {
+    text-align: center;
+}
+
+.wnNextheader h2,
+.wnNextheader .h2 {
+    font-size: 60px;
+    line-height: 50px;
+}
+
+.npPlanImageHolder {
+    margin-bottom: 15px;
+}
+
+.nextPlantextBlock {
+    font-size: 18px;
+    line-height: 35px;
+    margin-bottom: 50px;
+}
+
+.nextPlantextBlock h3,
+.nextPlantextBlock .h3 {
+    font-size: 25px;
+    line-height: 40px;
+    color: #000;
+}
+
+.nextPlanLeftBlock {
+    padding-top: 100px;
+}
+
+.nextPlanDescrBlock {
+    padding-top: 25px;
+}
+
+.ocrRequireDescrBlock {
+    text-align: center;
+    position: relative;
+    padding: 66px 0 56px;
+    max-width: 993px;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 1;
+}
+
+.ocrRequireDescrBlock h2,
+.ocrRequireDescrBlock .h2 {
+    font-size: 45px;
+    line-height: 50px;
+    margin-bottom: 68px;
+}
+
+
+.ocrRequireDescrBlock .imgHolder {
+    position: absolute;
+    top: -355px;
+    left: 0;
+    right: 0;
+}
+
+.crReqiuresList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.crReqiuresList > li {
+    width: 100%;
+    position: relative;
+}
+
+.crReqiuresList > li + li:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    top: -60px;
+    width: 175px;
+    height: 11px;
+    background-color: #1270ED;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.crReqiuresList > li + li {
+    margin-top: 120px;
+}
+
+.crReqiuresList > li h3,
+.crReqiuresList > li .h3 {
+    font-size: 33px;
+    line-height: 40px;
+    color: #000;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.ocrRequirementSec {
+    padding-top: 390px;
+}
+
+.contactTopBanner {
+    padding: 73px 101px 52px 78px;
+}
+
+.contactTopBanner strong {
+    font-size: 22px;
+    line-height: 30px;
+    font-weight: 400;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.addessContentList > li + li {
+    border-top: 1px solid #fff;
+    margin-top: 15px;
+    padding-top: 15px;
+}
+
+.addessContentList > li span{
+    display: block;
+    line-height: 30px;
+    font-size: 20px;
+}
+
+.addessContentList > li a {
+    font-size: 20px;
+    color: #fff;
+    display: block;
+}
+
+.addessContentList > li a:hover {
+    color: #C38177;
+}
+
+.contactFormWrap {
+    background-color: #082CD4;
+    padding-top: 310px;
+    padding-bottom: 270px;
+    margin-top: -200px;
+    position: relative;
+}
+
+.locationMapWrap iframe {
+    border-radius: 38px;
+}
+
+.contactFormDescr {
+    margin: 0;
+    max-width: none;
+    position: relative;
+}
+
+.contactFormDescr .formHeader {
+    color: #fff;
+}
+
+.contactFormDescr .formHeader h2,
+.contactFormDescr .formHeader .h2 {
+    color: #fff;
+}
+
+.formCloudLeft {
+    position: absolute;
+    top: 150px;
+    left: 70px;
+}
+
+.formCloudRight {
+    position: absolute;
+    right: 60px;
+    bottom: 10px;
+}
+
+.dtTypesHeader {
+    max-width: none;
+}
+
+.dtTypesDetails summary h2,
+.dtTypesDetails summary .h2 {
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 23px;
+    color: #C38177;
+    margin-bottom: 25px;
+}
+
+.dtTypesDetails summary {
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 500;
+    color: #707070;
+}
+
+.dtDetailText {
+    font-size: 16px;
+    line-height: 25px;
+    color: #707070;
+    padding-left: 25px;
+    margin-bottom: 15px;
+}
+
+.dtDetailText h3,
+.dtDetailText .h3 {
+    font-size: 18px;
+    line-height: 25px;
+    color: #707070;
+    margin-bottom: 20px;
+}
+
+.dtDetailText .textList > li {
+    position: relative;
+}
+
+.dtDetailText .textList > li:before {
+    position: absolute;
+    content: "";
+    left: -25px;
+    top: 10px;
+    width: 5px;
+    height: 5px;
+    background-color: #707070;
+    border-radius: 100%;
+}
+
+.backgroundWaveImage {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+}
+
+.backgroundWaveImage img {
+    width: 100%;
+}
+
+.atTexationBg {
+    position: absolute;
+    top: -240px;
+    z-index: -1;
+    width: 100%;
+}
+
+.atTexationBg img {
+    width: 100%;
+}
+
+.sebNeedDescriptionWrap.atAccountDescrWrap {
+    padding-top: 0;
+    margin-top: -80px;
+}
+
+.sebBusinessNeed.atAccountSec {
+    padding-top: 150px;
+    padding-bottom: 95px;
+    z-index: 1;
+}
+
+.abValuesSec .colsHolder {
+    justify-content: center;
+}
+
+.abAboutHeader {
+    padding-bottom: 64px;
+}
+
+.abAboutHeader .dbInfoTextDescr h1,
+.abAboutHeader .dbInfoTextDescr .h1 {
+    font-size: 28px;
+    line-height: 35px;
+    letter-spacing: -0.28px;
+    margin-bottom: 30px;
+}
+
+.abAboutHeader .dbInfoTextDescr {
+    text-align: center;
+}
+
+.whatWeDoSec .testiHeader {
+    max-width: 853px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 22px;
+}
+
+.whatWeDoSec .weDoDescrWrap {
+    max-width: 306px;
+}
+
+.weDoDescrWrap .imgHolder {
+    position: relative;
+    padding-top: 98%;
+}
+
+.weDoDescrWrap .imgHolder img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.darkBackgroundTestimonal .imageHolder  {
+    display: none;
+}
+
+.darkBackgroundTestimonal .clientFeedBackDescr {
+    background-color: transparent;
+}
+
+.page-id-549 .accTabListWrap {
+    margin-top: -75px;
+    z-index: 1;
+    position: relative;
+}
+
+.page-id-549 .accTabsList {
+    margin-bottom: 0;
+}
+
+.csCorporateTopBanner .btnWhiteSecondary {
+    padding-left: 40px;
+    padding-right: 40px;
+    font-size: 17px;
+    line-height: 30px;
+}
+
+.page-id-549 .tsTestimonialSec {
+    background: transparent linear-gradient(180deg, #C8DCF5 0%, #FEFFFF 100%) 0% 0% no-repeat padding-box;
+    padding-top: 100px;
+}
+
+.page-id-549 .tsTestimonialSec .testiHeader {
+    margin-bottom: 30px;
+}
+
+.page-id-549 .tsTestimonialSec .testiHeader h2,
+.page-id-549 .tsTestimonialSec .testiHeader .h2 {
+    margin-bottom: 10px;
+}
+
+.page-id-549 .tsTestimonialSec .clientFeedBackDescr {
+    background-color: #F7F7F7;
+}
+
+.faqQuestionSec h3,
+.faqQuestionSec .h3 {
+    font-size: 23px;
+    line-height: 50px;
+    margin-bottom: 35px;
+    text-align: left;
+    color: #000;
+}
+
+.page-id-549 .faqQuestionSec .testiHeader {
+    margin-bottom: 15px;
+}
+
+.page-id-138 .csCorpTopImage,
+.page-id-578 .csCorpTopImage {
+    top: 0;
+}
+
+.page-id-578 .accTabListWrap {
+    position: relative;
+    z-index: 1;
+    margin-top: 0;
+}
+
+.page-id-138 .accTabListWrap {
+    margin-top: 0;
+}
+
+.page-id-138 .accTabListWrap .accTabsList {
+    margin-bottom: 30px;
+}
+
+.page-id-138 .tsTestimonialSec {
+    background-color: #fff;
+}
+
+.page-id-138 .tsTestimonialSec .testiHeader h2,
+.page-id-138 .tsTestimonialSec .testiHeader .h2 {
+    margin-bottom: 0;
+}
+
+.page-id-138 .tsTestimonialSec .testiHeader {
+    margin-bottom: 20px;
+}
+
+.page-id-138 .tsTestimonialSec .clientFeedBackDescr {
+    background-color: #F7F7F7;
+}
+
+.page-id-138 .faqQuestionSec {
+    padding-top: 0;
+}
+
+.page-id-549 .csCorpTopImage {
+    top: 0;
+}
+
+.page-id-578 .whatWeDoSec .testiHeader {
+    line-height: 30px;
+    position: relative;
+    padding-bottom: 35px;
+}
+
+.page-id-578 .whatWeDoSec .testiHeader:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 165px;
+    height: 10px;
+    background-color: #1270ED;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.page-id-578 .whatWeDoSec .colsHolder {
+    justify-content: center;
+}
+
+.page-id-578 .whatWeDoSec .chCol6 {
+    width: 100%;
+}
+
+.page-id-578 .tsTestimonialSec {
+    background: transparent linear-gradient(180deg, #FEFFFF 0%, #C8DCF5 100%) 0% 0% no-repeat padding-box;
+    margin-top: -355px;
+    padding-top: 170px;
+}
+
+.page-id-578 .tsTestimonialSec .clientFeedBackDescr {
+    background-color: #F7F7F7;
+}
+
+.page-id-578 .tsTestimonialSec .testiHeader {
+    margin-bottom: 25px;
+}
+
+.page-id-578 .tsTestimonialSec .testiHeader h2,
+.page-id-578 .tsTestimonialSec .testiHeader .h2 {
+    margin-bottom: 0;
+}
+
+.page-id-578 .tsTestimonialSec .imageHolder {
+    display: block;
+}
+
+.page-id-578 .faqQuestions.dtTypesDetails summary {
+    max-width: 795px;
+}
+
+.wpcf7-not-valid-tip {
+    position: absolute;
+    bottom: -43px;
+    font-size: 13px;
+    left: 30px;
+}
+
+.wpcf7-response-output {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 13px;
+    border-color: #dc3232 !important;
+    color: #dc3232;
+}
+
+.wpcf7-form.sent .wpcf7-response-output {
+    border-color: #4BB543 !important;
+}
+
+.pageNotFoundWrapper {
+    text-align: center;
+}
+
+.pageNotFoundWrapper .alignHolder {
+    min-height: 71vh;
+    height: 100%;
+}
+
+.pageNotFoundWrapper h1,
+.pageNotFoundWrapper .h1 {
+    margin-bottom: 33px;
+}
+
+.pageNotFoundWrapper p {
+    margin-bottom: 25px;
+}
+
+.pageNotFoundWrapper .btnDefaultWidth {
+    min-width: 243px;
+}
+
+.page-id-138 .clientTrustSpecsSec .corporatNeedHeader {
+    color: #6C6C6C;
+    font-size: 18px;
+    line-height: 30px;
+    padding-top: 65px;
+}
+
+.page-id-140 .whatWeDoSec .weDoDescrWrap {
+    max-width: 406px;
+}
+
+.faqQuestionSec .accountOffset img {
+    width: 100%;
+}
+
+.page-id-142 .submitFormWrap.contactFormDescr {
+    padding-top: 35px;
+}
+
+.infoImageHolder,
+.backgroundWaveImage,
+.atTexationBg,
+.dbBusinessImage,
+.formSubmitbg {
+    display: none;
+}
+
+.infoImageHolderMbl {
+    margin-left: -42px;
+    margin-right: -53px;
+}
+
+.infoImageHolderMbl img {
+    width: 100%;
+}
+
+.backgroundWaveImageMbl {
+    position: absolute;
+    top: 320px;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.backgroundWaveImageMbl img {
+    width: 100%
+}
+
+.atTexationBgMbl {
+    position: absolute;
+    top: -260px;
+    z-index: -1;
+    left: 0;
+    right: 0;
+}
+
+.atTexationBgMbl img {
+    width: 100%;
+}
+
+.sebNeedDescriptionWrap.atAccountDescrWrap .linkBtn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 13px;
+}
+
+.clientContentWrap .chCol6 {
+    width: 33.333%;
+}
+
+.csSecretarySec .csSecretaryTextDescr .btn {
+    position: relative;
+    z-index: 2;
+}
+
+.dbBusinessImageMbl {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.dbBusinessImageMbl img {
+    width: 100%;
+}
+
+.dbDevelopTextDescr.sebNeedDescriptionWrap .linkBtn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+.caCredCorpSec .imageHolder,
+.tsTestimonialSec .imageHolder {
+    display: none;
+}
+
+.ameImgHolder {
+    margin-left: -120px;
+    margin-right: -120px;
+    margin-top: 20px;
+}
+
+.ameImgHolder img {
+    width: 100%;
+}
+
+.ameImgHolderMbl {
+    display: none;
+}
+
+.formSubmitbgMbl {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.formSubmitbgMbl img {
+    width: 100%;
+}
+
+.scImageMbl {
+    display: none;
+}
+
+.accountTopBanner .imageHolder {
+    margin-left: -25px;
+    margin-right: -25px;
+}
+
+.accountTopBanner .imageHolder img {
+    width: 100%;
+}
+
+.ocAccountImageHolder {
+    margin-left: -25px;
+    margin-right: -25px;
+}
+
+.ocAccountImageHolder img {
+    width: 100%;
+}
+
+.csCoporateImageHolder {
+    margin-left: -25px;
+    margin-right: -25px;
+}
+
+.csCoporateImageHolder img {
+    width: 100%;
+}
+
+.clientTrustSpecsSec .cloudImageHolder {
+    margin-top: -125px;
+    text-align: center;
+}
+
+.canDoImageHolder {
+    margin-left: -25px;
+    margin-right: -25px;
+}
+
+.canDoImageHolder img {
+    width: 100%;
+}
+
+.pricingSliderWrap {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.pricingSlider .slick-dots {
+    margin-top: 45px;
+}
+
+.pricingSlider .slick-dots > li,
+.tsTestimonialSec.darkBackgroundTestimonal .testimonialSlider .slick-dots > li,
+.incropedCompanySlider .slick-dots > li,
+.page-id-549 .tsTestimonialSec .slick-dots > li {
+    width: 8px;
+    height: 8px;
+}
+
+.pricingSlider .slick-dots > li  button,
+.incropedCompanySlider .slick-dots > li button,
+.page-id-549 .tsTestimonialSec .slick-dots > li button {
+    background-color: #707070;
+    width: 8px;
+    height: 8px;
+}
+
+.pricingSlider .slick-dots > li.slick-active  button,
+.tsTestimonialSec.darkBackgroundTestimonal .testimonialSlider .slick-dots > li.slick-active  button,
+.incropedCompanySlider .slick-dots > li.slick-active button,
+.page-id-549 .tsTestimonialSec .slick-dots > li.slick-active button {
+    background-color: #082CD4;
+}
+
+.esSecrtiyMobileWrap h2,
+.esSecrtiyMobileWrap .h2 {
+    font-size: 35px;
+    line-height: 45px;
+    color: #000;
+    margin-bottom: 37px;
+    font-weight: 700;
+}
+
+.secertyComplinceList >li h3,
+.secertyComplinceList > li .h3 {
+    font-size: 25px;
+    line-height: 25px;
+    color: #6C6C6C;
+    font-weight: 700;
+    margin-bottom: -6px;
+}
+
+.secertyComplinceList> li h4,
+.secertyComplinceList >li .h4 {
+    font-size: 30px;
+    line-height: 65px;
+    color: #1270ED;
+    font-weight: 700;
+}
+
+.secertyComplinceList >li + li {
+    margin-top: 40px;
+}
+
+.addonMblWrapper {
+    margin-bottom: 100px;
+}
+
+.csCorpTopImageMbl {
+    margin-left: -55px;
+    margin-right: -55px;
+    margin-top: -6px;
+}
+
+.csCorpTopImageMbl img {
+    width: 100%;
+}
+
+.proBusinessWrap,
+.skillWorkWrap,
+.ipPropertyProtecWrap,
+.acFundingTextWrap {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.conclusionBgImageMbl {
+    margin-left: -25px;
+    margin-right: -25px;
+}
+
+.conclusionBgImageMbl img {
+    width: 100%;
+}
+
+.faqQuestionSec .accountOffset {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.imageHolderMbl {
+    margin-bottom: 30px;
+}
+
+.imageHolderMbl img {
+    width: 100%;
+}
+
+.ipProcessImageMbl {
+    position: absolute;
+    top: -390px;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.ipProcessImageMbl img {
+    width: 100%;
+}
+
+.businessPeopleImage {
+    margin-left: -25px;
+    margin-right: -25px;
+}
+
+.businessPeopleImage img {
+    width: 100%;
+}
+
+.ocAccountBgMbl,
+.accTopBannerImageMbl {
+    margin-left: -45px;
+    margin-right: -45px;
+}
+
+.ocAccountBgMbl img,
+.accTopBannerImageMbl img {
+    width: 100%;
+}
+
+.cnctFormWrap .colsHolder .chCol:nth-child(2) {
+    display: block !important;
+}
+
+.submitFormWrap.contactFormDescr {
+    max-width: none;
+    margin-right: 0;
+}
+
+.contactBannerMbl {
+    text-align: left;
+    padding: 0;
+}
+
+.page-id-549 .tsTestimonialSec .slick-dots {
+    margin-top: 0;
+}
+
+.blogTopHeader {
+    font-size: 18px;
+    line-height: 30px;
+    color: #000000;
+    margin-bottom: 44px;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.blogTopHeader h2,
+.blogTopHeader h2 {
+    font-size: 35px;
+    line-height: 45px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.mrRecentHeader h3,
+.mrRecentHeader .h3 {
+    font-size: 18px;
+    line-height: 45px;
+    color: #000;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.rcRecentPostDescrList {
+    font-size: 14px;
+    line-height: 30px;
+    color: #C38177;
+    text-transform: uppercase;
+}
+
+.rcRecentPostDescrList strong {
+    font-weight: 500;
+}
+
+.rcRecentPostDescrList h3,
+.rcRecentPostDescrList .h3 {
+    font-size: 25px;
+    line-height: 30px;
+    color: #000;
+    font-weight: 700;
+    height: 60px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-transform: capitalize;
+}
+
+.rcRecentPostDescrList > li {
+    border-bottom: 1px solid #707070;
+    padding-bottom: 32px;
+}
+
+.rcRecentPostDescrList > li + li {
+    margin-top: 20px;
+}
+
+.mrRecentBlogPost .chCol7 {
+    width: 100%;
+}
+
+.mrRecentBlogPost .chCol5 {
+    width: 100%;
+}
+
+.recentBlogImage img {
+    width: 100%;
+}
+
+.mrRecentBlogPost {
+    padding-bottom: 30px;
+}
+
+.csSecrityBlogDescr strong {
+    font-size: 14px;
+    line-height: 30px;
+    color: #939393;
+    font-weight: 500;
+    margin-bottom: 5px;
+    display: block;
+    text-transform: uppercase;
+}
+
+.csSecrityBlogDescr h2,
+.csSecrityBlogDescr .h2 {
+    font-size: 25px;
+    line-height: 35px;
+    color: #082CD4;
+    font-weight: 700;
+    margin-bottom: 39px;
+}
+
+.csSecrityBlogDescr {
+    font-size: 16px;
+    line-height: 25px;
+    color: #000;
+    margin-bottom: 44px;
+    text-align: center;
+}
+
+.csSecrityBlogDescr p {
+    margin-bottom: 15px;
+}
+
+.csSecrityBlogDescr a {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 30px;
+    color: #000;
+    transition: color 0.3s ease;
+}
+
+.csSecrityBlogDescr a:hover {
+    color: #C38177;
+}
+
+.blogCategoryHeader {
+    margin-bottom: 22px;
+    text-align: center;
+}
+
+.blogCategoryHeader strong {
+    font-size: 12px;
+    line-height: 30px;
+    letter-spacing: 3.6px;
+    color: #939393;
+    text-transform: uppercase;
+    font-weight: 500;
+    display: block;
+    margin-bottom: -9px;
+}
+
+.blogCategoryHeader h2,
+.blogCategoryHeader .h2 {
+    font-size: 25px;
+    line-height: 35px;
+    font-weight: 700;
+    color: #000;
+    border-bottom: 1px solid #707070;
+    padding-bottom: 25px;
+}
+
+.blogCategoryHeader a {
+    font-size: 16px;
+    line-height: 45px;
+    color: #000;
+    padding-right: 50px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.blogCategoryHeader a:before {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 0;
+    border-style: solid;
+    border-color: #082CD4;
+    border-width: 0 0 2px 2px;
+    width: 20px;
+    height: 20px;
+    transform: rotate(-135deg);
+}
+
+.blogCategoryHeader a:hover {
+    color: #C38177;
+}
+
+.blogCatPost .imgHolder {
+    margin-bottom: 20px;
+}
+
+.blogCatPost strong {
+    font-size: 12px;
+    line-height: 30px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #C38177;
+}
+
+.blogCatPost h3,
+.blogCatPost .h3 {
+    font-size: 20px;
+    line-height: 25px;
+    color: #000;
+    font-weight: 700;
+}
+
+.blogCategorySec .chCol4 {
+    width: 100%;
+}
+
+.blogCategorySec .colsHolder {
+    margin-left: -57px;
+    margin-right: -57px;
+}
+
+.blogCategorySec .colsHolder .chCol {
+    padding-left: 57px;
+    padding-right: 57px;
+}
+
+.csSecrityBlogDescr.csSecurityMobileWrap {
+    display: block;
+}
+
+.catDetailPageHeader {
+    position: relative;
+    padding-bottom: 63px;
+    text-align: center;
+    background-color: #082CD4;
+}
+
+.catDetailPageHeader strong {
+    font-size: 12px;
+    line-height: 30px;
+    letter-spacing: 3.6px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.catDetailPageHeader h2,
+.catDetailPageHeader .h2 {
+    font-size: 45px;
+    line-height: 45px;
+    font-weight: 300;
+    color: #fff;
+}
+
+.catDetailbgImage {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    display: none;
+}
+
+.catDetailbgImage img {
+    width: 100%;
+}
+
+.catDetailPageHeader .imgHolder {
+    margin-left: -25px;
+    margin-right: -25px;
+}
+
+.catDetailPageHeader .imgHolder img {
+    width: 100%;
+}
+
+.blogTextDescrWrap .imgHolder {
+    margin-bottom: 20px;
+}
+
+.blogTextDescrWrap .imgHolder img {
+    width: 100%;
+}
+
+.blogDetailMainSec {
+    padding-top: 68px;
+    padding-bottom: 55px;
+    position: relative;
+    background-color: #FEFFFF;
+    z-index: 1;
+}
+
+.blogDetailMainSec:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #DBE6F2;
+    height: 200px;
+    width: 100%;
+    z-index: -1;
+}
+
+.blogInnerHeader {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.blogInnerHeader strong {
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 1.92px;
+    color: #C38177;
+    font-weight: 500;
+    padding-bottom: 7px;
+    border-bottom: 1px solid #C38177;
+    display: none;
+}
+
+.blogInnerHeader h2,
+.blogInnerHeader .h2 {
+    font-size: 30px;
+    line-height: 40px;
+    color: #1270ED;
+    font-weight: 700;
+    margin-top: 5px;
+    padding-bottom: 25px;
+    position: relative;
+}
+
+.blogInnerHeader h2:before,
+.blogInnerHeader .h2:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 250px;
+    height: 1px;
+    background-color: #000;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.detailTextWrap .blogHeadingText h3,
+.detailTextWrap .blogHeadingText .h3 {
+    font-size: 25px;
+    line-height: 35px;
+    color: #000;
+    margin-bottom: 26px;
+    font-weight: 700;
+}
+
+.detailTextWrap .blogHeadingText,
+.detailTextWrap {
+    margin-bottom: 50px;
+    font-size: 18px;
+    line-height: 35px;
+    color: #000;
+}
+
+.detailTextWrap {
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.blogDetailButtonList > li > a {
+    display: inline-block;
+    text-align: center;
+    font-size: 22px;
+    line-height: 25px;
+    font-weight: 700;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.blogDetailButtonList > li > a:hover {
+    color: #C38177;
+}
+
+.blogDetailButtonList > li + li {
+    border-left: 1px solid #FFFFFF;
+}
+
+.mayInterestSec h3,
+.mayInterestSec .h3 {
+    font-size: 28px;
+    line-height: 40px;
+    color: #000;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 23px;
+}
+
+.mayInterestSec {
+    background-color: #F2F2F2;
+    padding-top: 55px;
+    padding-bottom: 150px;
+}
+
+.interBlockDescr {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.interBlockDescr h4,
+.interBlockDescr .h4 {
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 700;
+    color: #000;
+}
+
+.blogCategorySec {
+    padding-top: 95px;
+}
+
+.archive.category .blogCatPost {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.firstParagraphContent {
+    display: none;
+}
+
+.page-id-999 .blogCategorySec {
+    padding-top: 95px;
+}
+
+.scConfusedSec.singlePostBottom {
+    background: transparent linear-gradient(180deg, #1270ED 0%, #3685E6 100%) 0% 0% no-repeat padding-box;
+    display: block;
+}
+
+.scConfusedSec.singlePostBottom .scConfusedTextDescr h2,
+.scConfusedSec.singlePostBottom .scConfusedTextDescr .h2 {
+    color: #fff;
+    margin-bottom: 47px;
+    font-size: 55px;
+    line-height: 65px;
+}
+.scConfusedSec.singlePostBottom .scConfusedTextDescr .borderLine {
+    display: none;
+}
+
+.scConfusedSec.singlePostBottom .scConfusedTextDescr .btn {
+    background-color: #fff;
+    min-width: 277px;
+    color: #082CD4;
+    border-color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.scConfusedSec.singlePostBottom .scConfusedTextDescr .btn:hover {
+    background-color: #C38177;
+    color: #fff;
+    border-color: #C38177;
+}
+
+.scConfusedSec.singlePostBottom .scImage {
+    position: absolute;
+    left: -180px;
+    bottom: -11px;
+    top: auto;
+}
+
+.mayInterestSec .chCol6 {
+    width: 100%;
+}
+
+.scConfusedSec.singlePostBottom .scImageMbl {
+    display: block;
+    margin-left: -25px;
+    margin-right: -25px;
+    margin-bottom: 40px;
+}
+
+.scConfusedSec.singlePostBottom .scImageMbl img {
+    width: 100%;
+}
+
+.scConfusedSec.singlePostBottom .scImage {
+    display: none;
+}
+
+.pagination {
+    display: flex;
+    padding-left: 0;
+    justify-content: center;
+    width: 100%;
+    padding-top: 55px;
+    padding-bottom: 35px;
+}
+
+.pagination .page-numbers {
+    font-size: 18px;
+    line-height: 25px;
+    color: #000;
+    margin-left: 7px;
+    margin-right: 7px;
+    position: relative;
+}
+
+.pagination .page-numbers.current,
+.pagination .page-numbers:hover {
+    color: #C38177;
+}
+
+.blogCatPost {
+    display: block;
+}
+
+.dhNomineDescrWrap .imgHolderMbl {
+    margin-bottom: 55px;
+}
+
+.page-id-138 .testimonialSlider .slick-dots {
+    display: flex !important;
+}
+
+.wnNextheader h2,
+.wnNextheader .h2 {
+    font-size: 56px;
+    line-height: 50px;
+}
+
+.page-id-578 .faqQuestionSec {
+    padding-bottom: 170px;
+}
+
+.page-id-578 .whatWeDoSec {
+    padding-bottom: 220px;
+}
+
+.csSecretaryTextDescr .linkBtn {
+    display: block;
+    margin-left: auto;
+    margin-top: 12px;
+    color: #fff;
+    font-size: 16px;
+    width: 37%;
+    margin-right: auto;
+}
+
+.csSecretaryTextDescr .linkBtn:hover {
+    color: #C38177;
+}
+
+.pmeProcessHeader {
+    max-width: 722px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 1.8px;
+    line-height: 55px;
+    color: #C38177;
+    margin-bottom: 55px;
+}
+
+.pmeProcessHeader h2,
+.pmeProcessHeader .h2 {
+    font-size: 40px;
+    line-height: 43px;
+    color: #1270ED;
+    letter-spacing: 0;
+}
+
+.pmeProcessHeader strong {
+    text-transform: uppercase;
+}
+
+.pmeProcessSec {
+    background-color: #DBE6F2;
+    padding-top: 90px;
+    padding-bottom: 68px;
+}
+
+.pmeProcessSec .chCol4 {
+    width: 100%;
+}
+
+.processBlockWrap {
+    text-align: center;
+    margin-bottom: 79px;
+}
+
+.processBlockWrap .imageHolder {
+    background-color: #fff;
+    width: 119px;
+    height: 119px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 35px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.processBlockWrap h3,
+.processBlockWrap .h3 {
+    font-size: 25px;
+    line-height: 30px;
+    color: #000;
+}
+
+.gtKnowSec {
+    background-color: #082CD4;
+    padding-top: 100px;
+    padding-bottom: 84px;
+    position: relative;
+}
+
+.gkKnowHeader {
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    line-height: 30px;
+    max-width: 543px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+}
+
+.gkKnowHeader h2,
+.gkKnowHeader .h2 {
+    font-size: 45px;
+    line-height: 50px;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.gkButtonWrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gkButtonWrap .btnGettingKnow {
+    border: 3px solid #fff;
+    color: #fff;
+    padding: 51px 35px;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    font-size: 35px;
+    line-height: 40px;
+    font-weight: 700;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.gkButtonWrap .btnGettingKnow:hover {
+    border-color: #C38177;
+    color: #C38177;
+}
+
+.gkButtonWrap .btnGettingKnow + .btnGettingKnow {
+    margin-top: 45px;
+}
+
+.gkKnowLeftImage {
+    position: absolute;
+    left: 0;
+    top: 60px;
+    display: none;
+}
+
+.gkKnowRightImage {
+    position: absolute;
+    right: 0;
+    top: 113px;
+    display: none;
+}
+
+.page-id-138 .contactFormSec:before {
+    top: -1180px;
+    height: 2211px;
+}
+
+.page-id-578 .faqQuestions.dtTypesDetails summary {
+    max-width: none;
+}
+
+.otTeamTextWrap .icnImageWrap {
+    display: block;
+    margin-bottom: 15px;
+    width: 110px;
+    height: 110px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.opOpenBankAccountSec .imgHolder {
+    width: 436px;
+    height: 475px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+
+.opOpenBankAccountSec .imgHolder img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.bankAccountHeader {
+    text-align: center;
+    font-size: 22px;
+    line-height: 35px;
+    color: #000;
+    margin-bottom: 38px;
+}
+
+.bankAccountHeader strong {
+    font-size: 25px;
+    line-height: 55px;
+    letter-spacing: 7.5px;
+    color: #000;
+    font-weight: 900;
+    display: block;
+    margin-bottom: 7px;
+}
+
+.bankAccountHeader h2,
+.bankAccountHeader .h2 {
+    font-size: 40px;
+    line-height: 45px;
+    margin-bottom: 16px;
+    letter-spacing: 0;
+}
+
+.bankDocumentWrap {
+    text-align: center;
+    font-size: 18px;
+    line-height: 35px;
+    color: #6C6C6C;
+    margin-bottom: 55px;
+}
+
+.bankDocumentWrap .imageIcn {
+    width: 66px;
+    height: 66px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+
+.bankDocumentWrap h3,
+.bankDocumentWrap .h3 {
+    font-size: 25px;
+    line-height: 35px;
+    color: #000;
+    font-weight: 700;
+}
+
+.opOpenBankAccountSec {
+    padding: 100px 0;
+}
+
+.opOpenBankAccountSec .colsHolder {
+    justify-content: center;
+}
+
+.opOpenBankAccountSec .chCol4 {
+    width: 100%;
+}
+
+.bankAccountHeader .imgHolderMbl {
+    margin-bottom: 37px;
+}
+
+.addessContentList > li {
+    display: flex;
+    align-items: center;
+}
+
+.addessContentList > li .ctnContactWrap {
+    margin-left: 30px;
+}
+
+.incropFormSec {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.incropFormHeader {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.incropFormHeader h2,
+.incropFormHeader .h2 {
+    font-size: 55px;
+    line-height: 40px;
+    color: #082CD4;
+    font-weight: 700;
+}
+
+.countingHeading {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 17px;
+}
+
+.selectDescrWrap select,
+.incropInput {
+    font-size: 18px;
+    font-weight: 400;
+    padding: 19px 15px;
+    width: 100%;
+    border: 1px solid #707070 !important;
+    border-radius: 10px !important;
+    height: 62px !important;
+    line-height: 18px;
+    color: #000;
+}
+
+.selectDescrWrap select {
+    cursor: pointer;
+}
+
+.selectDescrWrap {
+    position: relative;
+}
+
+.selectDescrWrap:before {
+    position: absolute;
+    content: "";
+    right: 15px;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 7.5px 0 7.5px 13px;
+    border-color: transparent transparent transparent #c4c4c4;
+    pointer-events: none;
+    transform: translateY(-50%);
+}
+
+.plusInputbtn {
+    font-size: 18px;
+    line-height: 30px;
+    color: #707070;
+    background-color: transparent;
+    border-radius: 100%;
+    border: 1px solid #707070;
+    width: 40px;
+    height: 40px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin-left: 16px;
+    flex-shrink: 0;
+}
+
+.plusInputbtn:hover {
+    background-color: #082CD4;
+    color: #fff;
+}
+
+.formIncropGroup {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.IncropFormMainWrap {
+    max-width: 939px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.formTopInputWrap .colsHolder {
+    margin-left: -32px;
+    margin-right: -32px;
+}
+
+.formTopInputWrap .colsHolder .chCol {
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+.formInputWrap {
+    border-bottom: 2px dotted #707070;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+}
+
+.IncropFormMainWrap label {
+    font-size: 16px;
+    line-height: 30px;
+    color: #000;
+    padding-left: 20px;
+    display: block;
+    margin-bottom: 9px;
+}
+
+.pbBusinessActivWrap,
+.corporateShareholdWrap {
+    font-size: 14px;
+    line-height: 20px;
+    color: #C38177;
+}
+
+.pbBusinessActivWrap p {
+    margin-bottom: 37px;
+}
+
+.pbInputWrap textarea {
+    resize: none;
+    height: 180px !important;
+}
+
+.pbBusinessActivWrap {
+    border-bottom: 2px dotted #707070;
+    padding-bottom: 50px;
+    margin-bottom: 30px;
+}
+
+.directInputWrap {
+    background-color: #DBE6F2;
+    border-radius: 10px;
+    padding: 18px 41px 43px;
+}
+
+.inputArrowWrap {
+    display: flex;
+    align-items: center;
+}
+
+.inputArrowWrap button {
+    background-color: transparent;
+    border: 0;
+    width: 24px;
+    height: 23px;
+    position: relative;
+    margin-left: 47px;
+}
+
+.inputArrowWrap :before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 12.5px 0 12.5px 21px;
+    border-color: transparent transparent transparent #000000;
+}
+
+.directInputDescrWrap {
+    position: relative;
+    margin-bottom: 35px;
+}
+
+.addMoreBtnWrap {
+    max-width: 96px;
+    text-align: center;
+    position: absolute;
+    right: -96px;
+    top: 25px;
+    margin-top: -7px;
+}
+
+.addMoreBtnWrap span {
+    display: block;
+    font-size: 16px;
+    line-height: 30px;
+    color: #707070;
+}
+
+.btnAddInput {
+    background-color: transparent;
+    border-radius: 100%;
+    border: 1px solid #707070;
+    width: 56px;
+    height: 56px;
+    font-size: 35px;
+    font-weight: 500;
+    line-height: 30px;
+    transition: all 0.3s ease;
+    color: #707070;
+}
+
+.btnAddInput:hover {
+    background-color: #082CD4;
+    color: #fff;
+}
+
+.directShareholdWrap {
+    border-bottom: 2px dotted #707070;
+    margin-bottom: 30px;
+}
+
+.directShareChildInputWrap .incropInput {
+    border-radius: 29px !important;
+}
+
+.directShareChildInputWrap {
+    margin-top: 65px;
+    padding-right: 67px;
+}
+
+.directShareChildInputWrap input {
+    margin-bottom: 30px;
+}
+
+input[type="number"] {
+    -webkit-appearance: none;
+    margin: 0;
+    -moz-appearance: textfield;
+}
+
+.corporateShareholdWrap p {
+    margin-bottom: 53px;
+}
+
+.corporateShareholdWrap textarea {
+    resize: none;
+    height: 190px !important;
+}
+
+.corporateShareholdWrap input {
+    margin-bottom: 30px;
+}
+
+.corporateShareholdWrap .selectDescrWrap {
+    margin-bottom: 23px;
+}
+
+.corporateShareholdWrap {
+    border-bottom: 1px dashed #000;
+    padding-bottom: 70px;
+    margin-bottom: 94px;
+    position: relative;
+}
+
+.addBtnWrap span {
+    display: block;
+    color: #707070;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.addBtnWrap {
+    width: 96px;
+    height: 89px;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -61px;
+}
+
+.addBtnWrap button {
+    background-color: #fff;
+}
+
+.intendPaidUpWrap input[type="number"]::-webkit-input-placeholder {
+    color: #BCB4B4;
+    font-size: 16px;
+}
+
+.intendPaidUpWrap input[type="number"]::-moz-placeholder {
+    opacity: 1;
+    color: #BCB4B4;
+    font-size: 16px;
+}
+
+.intendPaidUpWrap input[type="number"]:-moz-placeholder {
+    color: #BCB4B4;
+    font-size: 16px;
+}
+
+.intendPaidUpWrap input[type="number"]:-ms-input-placeholder {
+    color: #BCB4B4;
+    font-size: 16px;
+}
+
+.intendPaidUpWrap input[type="number"].placeholder {
+    color: #BCB4B4;
+    font-size: 16px;
+}
+
+.intendPaidUpWrap {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.intendPaidUpWrap span {
+    display: block;
+    margin-bottom: 26px;
+    color: #C38177;
+}
+
+
+.intendPaidUpWrap p {
+    color: #000;
+    margin-top: 30px;
+}
+
+.intendPaidUpWrap,
+.companyAddressWrap,
+.emailGuidelineWrap,
+.otherDeclarationWrap,
+.informRequiredSec,
+.ceoChiefPositionSec,
+.ciContactInformSec {
+    border-bottom: 1px dashed #000;
+    padding-bottom: 50px;
+    margin-bottom: 30px;
+}
+
+.companyAddressWrap textarea {
+    resize: none;
+    height: 148px !important;
+}
+
+.attachGuideList {
+    font-size: 14px;
+    line-height: 20px;
+    color: #000;
+    padding-left: 60px;
+    margin-top: 50px;
+}
+
+.attachGuideList > li {
+    position: relative;
+}
+
+.attachGuideList > li:before {
+    position: absolute;
+    left: -17px;
+    top: 5px;
+    content: "";
+    width: 7px;
+    height: 7px;
+    background-color: #000;
+    border-radius: 100%;
+}
+
+.attachGuideList > li + li {
+    margin-top: 20px;
+}
+
+.otherDeclarationWrap h3,
+.otherDeclarationWrap .h3 {
+    margin-bottom: 43px;
+}
+
+.otherDeclarationWrap strong {
+    font-size: 16px;
+    line-height: 30px;
+    color: #000;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 21px;
+}
+
+.checkBoxDeclareWrap {
+    padding-left: 35px;
+    margin-bottom: 53px;
+}
+
+.checkBoxDescr {
+    display: flex;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000;
+    align-items: start;
+}
+
+.checkBoxDescr span {
+    display: block;
+    margin-left: 15px;
+}
+
+.checkBoxDescr input[type="checkbox"] + label {
+    display: inline-block;
+    width: 16.6px;
+    height: 16px;
+    border: 1px solid #707070;
+    cursor: pointer;
+    padding: 0;
+    margin-top: 4px;
+}
+
+.checkBoxDescr input[type="checkbox"]:checked + label:after {
+    position: relative;
+    top: -9px;
+    left: 2px;
+    content: '\2714';
+    font-size: 11px;
+}
+
+.checkBoxDescr input[type="checkbox"] {
+    display: none;
+}
+
+.checkBoxDescr {
+    margin-bottom: 15px;
+}
+
+.otherDeclarationWrap .chCol6 label,
+.informRequiredSec .chCol:nth-child(1) label,
+.informRequiredSec .chCol:nth-child(2) label {
+    height: 88px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.informRequiredSec p,
+.ceoChiefPositionSec p {
+    font-size: 14px;
+    line-height: 20px;
+    display: block;
+    color: #C38177;
+    margin-bottom: 39px;
+}
+
+.informRequiredSec h4,
+.informRequiredSec .h4 {
+    font-size: 14px;
+    line-height: 20px;
+    color: #000;
+    font-weight: 700;
+    margin-bottom: 30px;
+    padding-left: 60px;
+}
+
+.informRequiredSec .attachGuideList {
+    margin-top: 0;
+    margin-bottom: 39px;
+}
+
+.informRequiredSec textarea,
+.ceoChiefPositionSec textarea {
+    resize: none;
+    height: 147px !important;
+}
+
+.informRequiredSec input {
+    margin-bottom: 43px;
+}
+
+.ciContactInformSec input {
+    margin-bottom: 30px;
+}
+
+.ciContactInformSec textarea {
+    resize: none;
+    height: 195px !important;
+}
+
+.bottomNoteText {
+    font-size: 20px;
+    line-height: 35px;
+    color: #FF2200;
+    margin-bottom: 38px;
+}
+
+.bottomNoteText strong {
+    display: block;
+    margin-bottom: 30px;
+}
+
+.formSubmitBtn {
+    text-align: center;
+}
+
+.formSubmitBtn .btn {
+    min-width: 196px;
+    font-weight: 700;
+}
+
+.gtKnowSec .imgHolder {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.cnctFormWrap .colsHolder .chCol:last-child .wpcf7-not-valid-tip {
+    bottom: -180px;
+}
+
+@media (min-width: 360px) {
+    .infoBtnWrap .btnDefaultWidth {
+        min-width: 138px;
+        margin-bottom: 0;
+    }
+
+    .infoBtnWrap .btn {
+        margin-left: 6px;
+        margin-right: 6px;
+    }
+
+    .backgroundWaveImageMbl {
+        top: 228px;
+    }
+
+    .sebBusinessNeed {
+        padding-bottom: 270px;
+    }
+
+    .sebBusinessNeed.atAccountSec {
+        padding-top: 215px;
+    }
+
+    .dbTextHeader h2, .dbTextHeader .h2 {
+        font-size: 30px;
+    }
+
+    .dbDevelopBussinesSec {
+        padding-top: 290px;
+    }
+
+    .caCredCorpSec .testiHeader h2,
+    .caCredCorpSec .testiHeader .h2 {
+        font-size: 30px;
+    }
+
+    .contactFormSec {
+        padding-top: 356px;
+        padding-bottom: 498px;
+    }
+
+    .formHeader {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .formHeader h2,
+    .formHeader .h2 {
+        font-size: 40px;
+        line-height: 45px;
+    }
+
+    .whatWeDoSec {
+        padding-bottom: 70px;
+    }
+
+    .page-id-140  .whatWeDoSec {
+        padding-bottom: 180px;
+    }
+
+    .getReadybanner {
+        padding-top: 270px;
+    }
+
+    .ocAcountServices .testiHeader h2,
+    .ocAcountServices .testiHeader .h2 {
+        line-height: 45px;
+        font-size: 32px;
+    }
+
+    .annualAccountHeader h2,
+    .annualAccountHeader .h2 {
+        font-size: 37px;
+    }
+
+    .faqQuestionSec {
+        padding-bottom: 0;
+    }
+
+    .page-id-549 .faqQuestionSec {
+        padding-bottom: 150px;
+    }
+
+    .corporatNeedHeader h2,
+    .corporatNeedHeader .h2 {
+        font-size: 33px;
+        line-height: 45px;
+    }
+
+    .clientTrustSpecsSec .cloudImageHolderMbl {
+        margin-top: -105px;
+        text-align: center;
+    }
+
+    .ipProcessImageMbl {
+        top: -450px;
+    }
+}
+
+@media (min-width: 375px) {
+    .sebBusinessNeed {
+        padding-bottom: 300px;
+    }
+
+    .sebBusinessNeed.atAccountSec {
+        padding-top: 245px;
+    }
+
+    .dbDevelopBussinesSec {
+        padding-top: 320px;
+    }
+
+    .formHeader h2,
+    .formHeader .h2 {
+        font-size: 41px;
+        line-height: 46px;
+    }
+
+    .contactFormSec {
+        padding-bottom: 631px;
+    }
+
+    .accTextDescr .accSubHead {
+        font-size: 17px;
+    }
+
+    .ipProcessHelpDetails {
+        padding-top: 130px;
+    }
+
+    .preIncroHeader h2,
+    .preIncroHeader .h2 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+}
+
+@media (min-width: 390px) {
+    .sebBusinessNeed {
+        padding-bottom: 320px;
+    }
+
+    .sebBusinessNeed.atAccountSec {
+        padding-top: 295px;
+    }
+
+    .dbDevelopBussinesSec {
+        padding-top: 360px;
+    }
+
+    .contactFormSec {
+        padding-bottom: 678px;
+        padding-top: 376px;
+    }
+
+    .preIncroHeader h2,
+    .preIncroHeader .h2 {
+        font-size: 36px;
+        line-height: 45px;
+    }
+}
+
+@media (min-width: 412px) {
+    .sebBusinessNeed {
+        padding-bottom: 360px;
+    }
+
+    .dbDevelopBussinesSec {
+        padding-top: 420px;
+    }
+
+    .contactFormSec {
+        padding-bottom: 757px;
+        padding-top: 396px;
+    }
+
+    .getReadybanner {
+        padding-top: 300px;
+    }
+
+    .preIncroHeader h2,
+    .preIncroHeader .h2 {
+        font-size: 42px;
+    }
+
+    .ipProcessSec {
+        padding-top: 120px;
+    }
+
+    .faqQuestions summary::before {
+        right: -80px;
+    }
+}
+
+@media (min-width: 414px) {
+    .contactFormSec {
+        padding-bottom: 690px;
+        padding-top: 409px;
+    }
+
+    .sebNeedDescriptionWrap {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .sebNeedDescriptionWrap h3,
+    .sebNeedDescriptionWrap .h3 {
+        font-size: 35px;
+        line-height: 45px;
+        margin-bottom: 23px;
+    }
+
+    .sebNeedDescriptionWrap .gsStartBtn,
+    .dbDevelopTextDescr.sebNeedDescriptionWrap .gsStartBtn {
+        margin-top: 20px;
+    }
+
+    .backgroundWaveImageMbl {
+        top: 200px;
+    }
+
+    .sebBusinessNeed {
+        padding-bottom: 300px;
+    }
+
+    .sebBusinessNeed.atAccountSec {
+        padding-top: 280px;
+    }
+
+    .sebNeedDescriptionWrap h3,
+    .sebNeedDescriptionWrap .h3 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .sebNeedDescriptionWrap.dbDevelopTextDescr {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .dbTextHeader strong{
+        font-size: 17px;
+    }
+
+    .dbTextHeader h2,
+    .dbTextHeader .h2 {
+        font-size: 37px;
+    }
+
+    .dbDevelopBussinesSec {
+        padding-top: 340px;
+    }
+
+    .clientTrustSpecsSec .cloudImageHolderMbl {
+        margin-top: -125px;
+    }
+
+    .standImageHolder{
+        margin: -546px -225px 0 -185px;
+    }
+
+    .corpPriciningDetail h4,
+    .corpPriciningDetail .h4 {
+        font-size: 70px;
+    }
+
+    .preIncroHeader h2,
+    .preIncroHeader .h2 {
+        font-size: 45px;
+        padding-top: 26px;
+    }
+
+    .dtTypesDetails summary h2,
+    .dtTypesDetails summary .h2 {
+        font-size: 23px;
+    }
+
+    .faqQuestionSec {
+        padding-top: 100px;
+    }
+
+    .ocrRequireDescrBlock {
+        padding: 66px 50px 56px;
+    }
+
+    .businessPersonTextWrap h2,
+    .businessPersonTextWrap .h2 {
+        font-size: 200px;
+    }
+
+    .preIncroHeader {
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+    .preIncroHeader h2,
+    .preIncroHeader .h2 {
+        font-size: 34px;
+        line-height: 50px;
+    }
+
+    .ipProcessImageMbl {
+        top: -470px;
+    }
+
+    .preIncroHeader h2:before,
+    .preIncroHeader .h2:before {
+        height: 136px;
+    }
+
+    .faqQuestionSec h3,
+    .faqQuestionSec .h3 {
+        font-size: 30px;
+    }
+
+    .infoBtnWrap .btn {
+        margin-left: 10px;
+        margin-right: 10px;
+        min-width: 157px;
+    }
+
+    .caCredCorpSec .testiHeader h2,
+    .caCredCorpSec .testiHeader .h2 {
+        font-size: 35px;
+    }
+
+    .formHeader {
+        font-size: 25px;
+        line-height: 35px;
+    }
+
+    .formHeader h2,
+    .formHeader .h2 {
+        font-size: 45px;
+        line-height: 50px;
+    }
+
+    .page-id-140  .whatWeDoSec {
+        padding-bottom: 220px;
+    }
+
+    .getReadybanner {
+        padding-top: 320px;
+    }
+
+    .ocAcountServices .testiHeader h2,
+    .ocAcountServices .testiHeader .h2 {
+        line-height: 50px;
+        font-size: 35px;
+    }
+
+    .annualAccountHeader h2,
+    .annualAccountHeader .h2 {
+        font-size: 40px;
+    }
+
+    .corporatNeedHeader h2,
+    .corporatNeedHeader .h2 {
+        font-size: 38px;
+        line-height: 50px;
+    }
+
+    .canDoTextDescr h2,
+    .canDoTextDescr .h2 {
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    .dhNomineDescrWrap h2,
+    .dhNomineDescrWrap .h2 {
+        font-size: 35px;
+        line-height: 45px;
+    }
+
+    .otTeamTextDescWrap h2,
+    .otTeamTextDescWrap .h2 {
+        font-size: 35px;
+        line-height: 40px;
+    }
+
+    .wnNextheader h2,
+    .wnNextheader .h2 {
+        font-size: 60px;
+        line-height: 55px;
+    }
+
+    .ipProcessSec {
+        padding-top: 70px;
+    }
+
+    .sslLocateTextDescr h2, .sslLocateTextDescr .h2 {
+        font-size: 40px;
+    }
+
+}
+
+@media (min-width: 428px) {
+    .contactFormSec {
+        padding-bottom: 752px;
+    }
+
+    .preIncroHeader h2, .preIncroHeader .h2 {
+        font-size: 42px;
+        line-height: 50px;
+    }
+
+    .dbDevelopBussinesSec {
+        padding-top: 390px;
+    }
+}
+
+@media (min-width: 576px) {
+    .sebBusinessNeed {
+        padding-bottom: 560px;
+    }
+
+    .sebNeedDescriptionWrap {
+        padding-top: 190px;
+    }
+
+    .csSecretarySec {
+        padding-bottom: 310px;
+    }
+
+    .sebBusinessNeed.atAccountSec {
+        padding-top: 620px;
+        margin-top: -125px;
+    }
+
+    .atAccountDescrWrap {
+        max-width: none;
+    }
+
+    .dbDevelopBussinesSec {
+        padding-top: 670px;
+    }
+
+    .contactFormSec {
+        padding-top: 579px;
+        padding-bottom: 1253px;
+    }
+
+    .clientChoiceBusinessWrap {
+        padding-bottom: 680px;
+    }
+
+    .standImageHolder {
+        margin: -649px -225px 0 -185px;
+    }
+
+    .wpcf7-response-output {
+        bottom: -140px;
+    }
+
+    .whatWeDoSec {
+        padding-bottom: 220px;
+    }
+}
+
+@media (min-width: 768px) {
+    .logo {
+        max-width: 138px;
+    }
+
+    #pageHeader {
+        border-bottom: 0;
+    }
+
+    .mainNavigation > li {
+        padding-bottom: 0;
+        border-bottom: 0;
+    }
+
+    .pageNavCollapse {
+        background-color: transparent;
+        transition: none;
+        transform: none;
+        position: static;
+        padding-bottom: 0;
+        text-align: left;
+        align-items: center;
+        width: 80%;
+    }
+
+    .mainNavigation {
+        align-items: center;
+        justify-content: end;
+        display: flex;
+        font-size: 13px;
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+
+    .pgNavOpener {
+        display: none;
+    }
+
+    .mainNavigation > li + li {
+        margin-left: 8px;
+        margin-top: 0;
+    }
+
+    .dbInfoTextDescr h1,
+    .dbInfoTextDescr .h1 {
+        font-size: 23px;
+        line-height: 32px;
+        margin-bottom: 19px;
+    }
+
+    .infoBtnWrap .btnDefaultWidth {
+        min-width: 140px;
+        width: auto;
+    }
+
+    .infoBtnWrap .btn {
+        margin-left: 5px;
+        margin-right: 5px;
+        font-size: 17px;
+        line-height: 33px;
+    }
+
+    .homeInfoSection .chCol5 {
+        width: 50%;
+    }
+
+    .homeInfoSection .chCol7 {
+        width: 50%;
+    }
+
+    .infoImageHolder {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .infoImageHolder img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .dbInfoTextDescr strong {
+        font-size: 18px;
+        line-height: 28px;
+        margin-bottom: 15px;
+    }
+
+    .dbInfoTextDescr {
+        font-size: 16px;
+        padding-left: 20px;
+        line-height: 25px;
+    }
+
+    .infoBtnWrap {
+        justify-content: start;
+    }
+
+    .rowReverse {
+        flex-direction: row-reverse;
+    }
+
+    .sebBusinessNeed .chCol7 {
+        width: 50%;
+    }
+
+    .sebBusinessNeed .chCol5 {
+        width: 50%;
+    }
+
+    .sebBusinessNeed {
+        padding-top: 66px;
+        padding-bottom: 85px;
+        margin-top: -125px;
+        z-index: 1;
+    }
+
+    .sebNeedHeader h2,
+    .sebNeedHeader .h2 {
+        font-size: 35px;
+        line-height: 55px;
+        margin-bottom: 0;
+        color: #fff;
+    }
+
+    .csSecretarySec .infoImageHolder {
+        width: 50%;
+    }
+
+    .csSecretarySec {
+        position: relative;
+        padding-top: 182px;
+        padding-bottom: 452px;
+        margin-top: -94px;
+    }
+
+    .csSecretaryTextDescr h2,
+    .csSecretaryTextDescr .h2 {
+        font-size: 30px;
+    }
+
+    .chCol6 {
+        width: 50%;
+    }
+
+    .wnNextPlanSec .inropForienOffSet {
+        padding-left: 60px;
+    }
+
+    .readyBgImage img {
+        width: 80%;
+    }
+
+    .infoImageHolder,
+    .backgroundWaveImage,
+    .atTexationBg,
+    .dbBusinessImage,
+    .formSubmitbg {
+        display: block;
+    }
+
+    .infoImageHolderMbl,
+    .backgroundWaveImageMbl,
+    .atTexationBgMbl,
+    .dbBusinessImageMbl,
+    .formSubmitbgMbl,
+    .ocAccountImageHolder {
+        display: none;
+    }
+
+    .dbInfoTextDescr .subHeading {
+        letter-spacing: 3.4px;
+        margin-bottom: 5px;
+    }
+
+    .homeInfoSection {
+        padding-bottom: 206px;
+    }
+
+    .sebNeedDescriptionWrap {
+        padding-top: 17px;
+        max-width: 294px;
+        font-size: 14px;
+        line-height: 24px;
+        text-align: left;
+    }
+
+    .sebNeedDescriptionWrap h3,
+    .sebNeedDescriptionWrap .h3 {
+        font-size: 27px;
+        line-height: 39px;
+        margin-bottom: 8px;
+        font-weight: 900;
+    }
+
+    .sebNeedDescriptionWrap .linkBtn {
+        display: block;
+    }
+
+    .sebNeedDescriptionWrap .gsStartBtn {
+        margin-top: 0;
+        font-size: 17px;
+        line-height: 28px;
+    }
+
+    .csSecretaryTextDescr {
+        max-width: 350px;
+        font-size: 16px;
+        line-height: 26px;
+        text-align: left;
+        padding-top: 0;
+    }
+
+    .csSecretaryTextDescr h2,
+    .csSecretaryTextDescr .h2 {
+        font-size: 30px;
+    }
+
+    .sebBusinessNeed.atAccountSec {
+        padding-top: 0;
+    }
+
+    .sebNeedDescriptionWrap.atAccountDescrWrap .linkBtn {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0;
+    }
+
+    .sebNeedDescriptionWrap.dbDevelopTextDescr {
+        max-width: 517px;
+        border-radius: 49px;
+        padding: 75px 40px 45px;
+        margin-left: auto;
+        margin-right: 0;
+    }
+
+    .dbDevelopBussinesSec {
+        padding-top: 300px;
+    }
+
+    .caCredCorpSec .imageHolder,
+    .tsTestimonialSec .imageHolder {
+        display: block;
+    }
+
+    .caCredCorpSec .testiHeader h2,
+    .caCredCorpSec .testiHeader .h2 {
+        font-size: 40px;
+        line-height: 65px;
+        margin-bottom: 30px;
+    }
+
+    .caCredCorpSec .chCol3 {
+        width: 33.333%;
+    }
+
+    .ameHeader {
+        font-size: 16px;
+        line-height: 40px;
+        text-align: left;
+    }
+
+    .ameHeader h2,
+    .ameHeader .h2 {
+        font-size: 48px;
+        line-height: 57px;
+    }
+
+    .ameImgHolder {
+        margin: 0;
+    }
+
+    .ftContentWrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .ftNavList {
+        width: 70%;
+        display: flex;
+    }
+
+    .ftLogo {
+        margin: 0;
+        max-width: 193px;
+    }
+
+    .ftNavList > li +li {
+        margin-left: 15px;
+    }
+
+    .contactFormSec {
+        padding-top: 141px;
+        padding-bottom: 12px;
+    }
+
+    .formHeader h2,
+    .formHeader .h2 {
+        font-size: 24px;
+        line-height: 45px;
+        margin-bottom: 8px;
+    }
+
+    .formHeader {
+        font-size: 14px;
+        line-height: 21px;
+        margin-bottom: 15px;
+    }
+
+    .submitFormWrap {
+        margin-right: 116px;
+    }
+
+    .formGroup .formControl {
+        font-size: 15px;
+        height: 38px;
+        line-height: 30px;
+    }
+
+    .formGroup {
+        margin-bottom: 10px;
+    }
+
+    .formGroup textarea.formControl {
+        height: 127px;
+    }
+
+    .ctnSubmitBtnWrap {
+        justify-content: end;
+    }
+
+    .home .contactFormSec {
+        display: none;
+    }
+
+    .accTextDescr .accSubHead {
+        font-size: 14px;
+        line-height: 30px;
+        margin-bottom: 10px;
+    }
+
+    .accTextDescr h2,
+    .accTextDescr .h2 {
+        font-size: 30px;
+        line-height: 40px;
+        margin-bottom: 17px;
+    }
+
+    .accTextDescr {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .accountTopBanner {
+        padding-top: 64px;
+    }
+
+    .whatWeDoSec {
+        padding-bottom: 80px;
+    }
+
+    .readyBgImage {
+        position: absolute;
+        top: -22px;
+        left: 2%;
+        right: auto;
+    }
+
+    .getReadybanner {
+        padding-top: 50px;
+        padding-bottom: 32px;
+    }
+
+    .getReadyTextDescr h2,
+    .getReadyTextDescr .h2 {
+        line-height: 35px;
+        font-size: 33px;
+    }
+
+    .readyTextWrap {
+        padding-top: 17px;
+        padding-bottom: 27px;
+        font-size: 15px;
+        line-height: 22px;
+    }
+
+    .readyTextWrap:before {
+        left: -106px;
+        border-radius: 150px 0 0 150px;
+    }
+
+    .getReadyTextDescr {
+        margin-right: 45px;
+        text-align: left;
+    }
+
+    .ocAcountServices  .chCol4 {
+        width: 50%;
+    }
+
+    .accServiceWrap h3,
+    .accServiceWrap .h3 {
+        padding-left: 0;
+    }
+
+    .accServiceList > li {
+        padding-left: 0;
+    }
+
+    .accServiceList > li:before {
+        left: -10px;
+    }
+
+    .ocAcountServices {
+        padding-bottom: 90px;
+    }
+
+    .faqQuestionSec {
+        padding-bottom: 100px;
+    }
+
+    .abAboutHeader .dbInfoTextDescr {
+        padding-left: 40px;
+        text-align: left;
+    }
+
+    .abAboutHeader .dbInfoTextDescr h1,
+    .abAboutHeader .dbInfoTextDescr .h1 {
+        font-size: 25px;
+        line-height: 34px;
+        letter-spacing: -0.35px;
+    }
+
+    .abFounderText {
+        margin-bottom: 0;
+    }
+
+    .aboutOurPlanSec {
+        padding-top: 130px;
+        padding-bottom: 130px;
+    }
+
+    .aboutOurplanTextDescr {
+        margin-bottom: 0;
+    }
+
+    .abValuesSec .chCol4 {
+        width: 33.333%;
+    }
+
+    .csCoporateImageHolder {
+        display: none;
+    }
+
+    .csCorporateTopSec .align {
+        padding-top: 20px;
+        padding-bottom: 124px;
+    }
+
+    .csCorporateTopBanner {
+        max-width: 425px;
+        padding: 16px 30px 12px 35px;
+        background-color: rgba(8, 44, 212, 0.91);
+        border-radius: 49px;
+        font-size: 12px;
+        line-height: 22px;
+        margin-left: auto;
+        text-align: left;
+        mix-blend-mode: darken;
+    }
+
+    .csCorporateTopBanner h2,
+    .csCorporateTopBanner .h2 {
+        font-size: 22px;
+        line-height: 35px;
+        margin-bottom: 10px;
+    }
+
+    .csCorporateTopBanner p {
+        margin-bottom: 10px;
+    }
+
+    .corporatNeedHeader h2,
+    .corporatNeedHeader .h2 {
+        font-size: 40px;
+    }
+
+    .helpDetailsDescrWrap {
+        display: flex;
+        align-items: center;
+        text-align: left;
+    }
+
+    .clientTrustSpecsSec .cloudImageHolderMbl {
+        display: none;
+    }
+
+    .corporatNeedHelpSec {
+        padding-bottom: 50px;
+    }
+
+    .page-id-138 .clientTrustSpecsSec .corporatNeedHeader {
+        padding-top: 0;
+    }
+
+    .canDoTextDescr {
+        text-align: right;
+        padding-top: 0;
+    }
+
+    .canDoTextDescr h2,
+    .canDoTextDescr .h2 {
+        font-size: 29px;
+    }
+
+    .canDoDetailList > li h3,
+    .canDoDetailList > li .h3 {
+        font-size: 20px;
+    }
+
+    .corporatePricingSec {
+        padding-top: 170px;
+        padding-bottom: 70px;
+    }
+
+    .dhNomineDescrWrap h2,
+    .dhNomineDescrWrap .h2 {
+        font-size: 40px;
+    }
+
+    .dhNomineDescrWrap {
+        border-radius: 93px;
+        padding: 44px 66px;
+        font-size: 20px;
+        line-height: 35px;
+    }
+
+    .esSecrtiyMobileWrap {
+        display: none;
+    }
+
+    .dhNomineDescrWrap .imgHolderMbl {
+        margin-left: -12px;
+        margin-right: -12px;
+    }
+
+    .dhNomineDescrWrap .imgHolderMbl img {
+        width: 100%;
+    }
+
+    .page-id-578 .csCorporateTopBanner h2,
+    .page-id-578 .csCorporateTopBanner .h2 {
+        font-size: 23px;
+    }
+
+    .page-id-578 .accTabsList > li > a {
+        min-width: 101px;
+    }
+
+    .ameAccountingSec.syStartJourneySec .ameHeader h2,
+    .ameAccountingSec.syStartJourneySec .ameHeader .h2 {
+        font-size: 34px;
+        line-height: 47px;
+    }
+
+    .page-id-578 .whatWeDoSec .chCol6 {
+        width: 50%;
+    }
+
+    .csCorpTopImageMbl {
+        display: none;
+    }
+
+    .sslSingaporLocateSec .chCol5 {
+        width: 45%;
+    }
+
+    .sslSingaporLocateSec .chCol7 {
+        width: 55%;
+    }
+
+    .sslLocateTextDescr {
+        text-align: left;
+    }
+
+    .sslLocationImageMbl {
+        display: none;
+    }
+
+    .proBusinessWrap,
+    .skillWorkWrap,
+    .ipPropertyProtecWrap,
+    .acFundingTextWrap {
+        text-align: left;
+        margin-bottom: 0;
+    }
+
+    .proBusinessContent {
+        margin-bottom: 0;
+    }
+
+    .conclusionBgImageMbl {
+        display: none;
+    }
+
+    .conclBenifitWrap {
+        padding-top: 300px;
+    }
+
+    .conclBenifitTextdescr {
+        text-align: left;
+    }
+
+    .incropHelpTextblock {
+        text-align: right;
+        font-size: 18px;
+    }
+
+    .incropTextheader {
+        margin-left: -65px;
+        margin-bottom: 70px;
+    }
+
+    .incropTextheader:before {
+        bottom: 0;
+        left: auto;
+        margin: 0;
+    }
+
+    .clientChoiceImageMbl {
+        display: none;
+    }
+
+    .clientContentWrap {
+        text-align: left;
+    }
+
+    .standImageHolder{
+        position: absolute;
+        left: -181px;
+        top: -150px;
+    }
+
+    .clientChoiceBusinessWrap {
+        padding-bottom: 240px;
+    }
+
+    .srStandardRequireText h2,
+    .srStandardRequireText .h2 {
+        font-size: 38px;
+        line-height: 40px;
+        text-align: left;
+    }
+
+    .srStandardRequireText {
+        font-size: 15px;
+        line-height: 19px;
+        padding: 0;
+    }
+
+    .standRequireList > li + li {
+        margin-top: 9px;
+    }
+
+    .standImageHolder img {
+        width: 75%;
+    }
+
+    .preIncroHeader {
+        display: flex;
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    .preIncroHeader h2,
+    .preIncroHeader .h2 {
+        font-size: 32px;
+        padding-right: 47px;
+        margin-right: 36px;
+        padding-left: 38px;
+        margin-bottom: 0;
+        width: 40%;
+        text-align: right;
+        padding-top: 0;
+    }
+
+    .preIncroHeader strong {
+        width: 68%;
+    }
+
+    .preIncroHeader h2:before,
+    .preIncroHeader .h2:before {
+        left: auto;
+        right: 0;
+    }
+
+    .preIncroDescrWrap .chCol4 {
+        width: 33.333%;
+    }
+
+    .preQuestionTextWrap {
+        margin-bottom: 0;
+    }
+
+    .syStartJourneySec .chCol6:first-child {
+        width: 60%;
+    }
+
+    .syStartJourneySec .chCol6 {
+        width: 40%;
+    }
+
+    .tsTestimonialSec.darkBackgroundTestimonal .imageHolderMbl {
+        display: none;
+    }
+
+    .page-id-578 .tsTestimonialSec {
+        margin-top: -165px;
+    }
+
+    .readytartedDark {
+        background-color: #082CD4;
+    }
+
+    .readytartedDark .getReadyTextDescr h2,
+    .readytartedDark .getReadyTextDescr .h2 {
+        color: #fff;
+    }
+
+    .readytartedDark .readyTextWrap {
+        color: #707070;
+    }
+
+    .readytartedDark .readyTextWrap .btn {
+        background-color: #082CD4;
+        color: #fff;
+        border-color: #082CD4;
+    }
+
+    .readytartedDark .readyTextWrap .btn:hover {
+        background-color: #C38177;
+        border-color: #C38177;
+    }
+
+    .readytartedDark .readyTextWrap:before {
+        background-color: #fff;
+    }
+
+    .otTeamTextDescWrap .chCol4 {
+        width: 33.333%;
+    }
+
+    .page-id-549 .accTabsList > li > a {
+        min-width: 91px;
+    }
+
+    .faqQuestionSec h3,
+    .faqQuestionSec .h3 {
+        text-align: center;
+    }
+
+    .ipProcessImageMbl {
+        display: none;
+    }
+
+    .otTeamExperirenseWrap {
+        padding-bottom: 140px;
+    }
+
+    .preIncroHeader .preIncroText {
+        width: 60%;
+        text-align: left;
+    }
+
+    .srReuiredList {
+        padding-left: 50px;
+    }
+
+    .helpDetailsList > li + li:after {
+        width: 100%;
+    }
+
+    .businessPeopleImage {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        right: 0;
+        bottom: 0;
+        margin: 0;
+    }
+
+    .businessPersonTextWrap {
+        padding-right: 110px;
+    }
+
+    .businessPersonTextWrap:before {
+        right: 0;
+    }
+
+    .wnNextPlanSec {
+        padding-bottom: 780px;
+    }
+
+    .ocrRequireDescrBlock .imgHolder {
+        top: -245px;
+    }
+
+    .ocrRequireDescrBlock {
+        background-color: #F2F2F2;
+        border-radius: 46px;
+        padding: 306px 40px 56px;
+    }
+
+    .crReqiuresList > li {
+        width: 50%;
+    }
+
+    .crReqiuresList > li + li:before {
+        position: absolute;
+        content: "";
+        left: 0;
+        right: auto;
+        top: 0;
+        width: 11px;
+        height: 175px;
+        background-color: #1270ED;
+        margin: 0;
+    }
+
+    .crReqiuresList > li + li {
+        margin-top: 0;
+    }
+
+    .page-id-549 .tsTestimonialSec {
+        margin-top: -125px;
+    }
+
+    .home .sebNeedDescriptionWrap {
+        max-width: 307px;
+    }
+
+    .home .sebNeedDescriptionWrap.dbDevelopTextDescr {
+        max-width: 517px;
+    }
+
+    .dbDevelopTextDescr.sebNeedDescriptionWrap .linkBtn {
+        margin-left: 0;
+    }
+
+    .sub-menu {
+        text-align: center;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    .accTopBannerImageMbl {
+        display: none;
+    }
+
+    .ocAccountBgMbl {
+        display: none;
+    }
+
+    .imgHolderMbl {
+        display: none;
+    }
+
+    .srStandardRequireText {
+        max-width: 420px;
+    }
+
+    .standImageHolder {
+        margin: 0;
+    }
+
+    .imageHolderMbl {
+        display: none;
+    }
+
+    .contactFormWrap .container > .colsHolder .chCol:nth-child(2) {
+        display: none;
+    }
+
+    .contactFormWrap {
+        margin-top: -270px;
+        padding-bottom: 120px;
+    }
+
+    .wpcf7-response-output {
+        bottom: -21px;
+        max-width: 160px;
+        line-height: 20px;
+    }
+
+    .wpcf7-not-valid-tip {
+        bottom: -32px;
+        font-size: 12px;
+    }
+
+    .blogTopHeader h2,
+    .blogTopHeader h2 {
+        font-size: 45px;
+        line-height: 40px;
+    }
+
+    .blogTopHeader {
+        font-size: 22px;
+        line-height: 35px;
+        text-align: left;
+    }
+
+    .mrRecentHeader h3,
+    .mrRecentHeader .h3 {
+        font-size: 30px;
+        text-align: left;
+    }
+
+    .mrRecentBlogPost .chCol7 {
+        width: 55%;
+    }
+
+    .mrRecentBlogPost .chCol5 {
+        width: 45%;
+    }
+
+    .csSecrityBlogDescr.csSecurityMobileWrap {
+        display: none;
+    }
+
+    .csSecrityBlogDescr h2,
+    .csSecrityBlogDescr .h2 {
+        font-size: 28px;
+        margin-bottom: 14px;
+    }
+
+    .csSecrityBlogDescr {
+        text-align: left;
+    }
+
+    .blogCategoryHeader {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #707070;
+        text-align: left;
+    }
+
+    .blogCategoryHeader strong {
+        margin-bottom: 0;
+    }
+
+    .blogCategoryHeader h2,
+    .blogCategoryHeader .h2 {
+        border-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .blogCategoryHeader a {
+        margin-right: 40px;
+    }
+
+    .blogCategoryHeader a:before {
+        top: 14px;
+    }
+
+    .mrRecentBlogPost .chCol4 {
+        display: none;
+    }
+
+    .catDetailbgImage {
+        display: block;
+    }
+
+    .catDetailPageHeader .imgHolder {
+        display: none;
+    }
+
+    .catDetailPageHeader h2,
+    .catDetailPageHeader .h2 {
+        line-height: 40px;
+    }
+
+    .catDetailPageHeader {
+        padding-top: 50px;
+        background-color: transparent;
+    }
+
+    .blogDetailMainSec {
+        padding-top: 123px;
+        padding-bottom: 0;
+    }
+
+    .blogTextDescrWrap .imgHolder {
+        width: 720px;
+        height: 489px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .blogDetailMainSec:before {
+        height: 362px;
+    }
+
+    .blogInnerHeader strong {
+        display: inline-block;
+    }
+
+    .blogInnerHeader h2,
+    .blogInnerHeader .h2 {
+        font-size: 35px;
+        color: #082CD4;
+        padding-bottom: 0;
+        border-bottom: 0;
+    }
+
+    .blogInnerHeader h2:before,
+    .blogInnerHeader .h2:before {
+        display: none;
+    }
+
+    .detailTextWrap {
+        text-align: left;
+    }
+
+    .blogDetailButtonList {
+        display: flex;
+        justify-content: space-around;
+        position: relative;
+    }
+
+    .blogDetailButtonList:before {
+        position: absolute;
+        content: "";
+        left: -9999px;
+        right: -9999px;
+        top: 0;
+        bottom: 0;
+        background-color: #082CD4;
+        z-index: -1;
+    }
+
+    .blogDetailButtonList > li {
+        width: 50%;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: center;
+    }
+
+    .interBlockDescr {
+        display: flex;
+        align-items: center;
+        text-align: left;
+    }
+
+    .interBlockDescr img {
+        width: 322px;
+    }
+
+    .interBlockDescr h4,
+    .interBlockDescr .h4 {
+        margin-left: 20px;
+    }
+
+    .clientTrustSpecsSec .cloudImageHolder {
+        margin-top: 25px;
+    }
+
+    .blogCategorySec .chCol4 {
+        width: 50%;
+    }
+
+    .blogCategorySec {
+        padding-top: 150px;
+    }
+
+    .archive.category .blogCatPost {
+        text-align: left;
+    }
+
+    .blogPostSlider {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+
+    .blogPostSlider .sliderWrap {
+        padding-left: 20px;
+        padding-right: 20px;
+        width: 33.333%;
+    }
+
+    .scConfusedSec.singlePostBottom .scImageMbl {
+        display: none;
+    }
+
+    .scConfusedSec.singlePostBottom .scImage {
+        display: block;
+    }
+
+    .scConfusedSec.singlePostBottom {
+        padding-top: 90px;
+    }
+
+    .page-id-999 .scConfusedSec.singlePostBottom {
+        margin-top: 255px;
+    }
+
+    .pagination {
+        padding-top: 45px;
+        padding-bottom: 45px;
+    }
+
+    .page-id-134 .contactFormSec .submitFormWrap .formHeader h2,
+    .page-id-134 .contactFormSec .submitFormWrap .formHeader .h2 {
+        color: #000;
+    }
+
+    .helpDetailsDescrWrap .textDecription {
+        margin-left: 43px;
+    }
+
+    .incropedCompanySlider {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-left: -25px;
+        margin-right: -25px;
+        margin-top: 135px;
+    }
+
+    .incropedCompanySlider .doForYouSlider {
+        width: 33.333%;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .businessPersonTextWrap #counter {
+        font-size: 200px;
+    }
+
+    .annualAccount .imgHolder {
+        text-align: center;
+    }
+
+    .pmeProcessSec {
+        padding-top: 125px;
+        padding-bottom: 198px;
+    }
+
+    .pmeProcessHeader {
+        letter-spacing: 5.4px;
+        margin-bottom: 100px;
+    }
+
+    .pmeProcessHeader h2,
+    .pmeProcessHeader .h2 {
+        font-size: 60px;
+        line-height: 65px;
+    }
+
+    .pmeProcessSec .chCol4 {
+        width: 33.333%;
+    }
+
+    .processBlockWrap {
+        margin-bottom: 0;
+    }
+
+    .gkButtonWrap .btnGettingKnow {
+        max-width: 316px;
+        border-radius: 53px;
+        padding: 51px 35px;
+    }
+
+    .gkButtonWrap .btnGettingKnow + .btnGettingKnow {
+        margin-left: 50px;
+        margin-top: 0;
+    }
+
+    .gkKnowLeftImage,
+    .gkKnowRightImage{
+        display: block;
+    }
+
+    .gkKnowLeftImage {
+        width: 26%;
+    }
+
+    .gkKnowRightImage {
+        width: 18%;
+    }
+
+    .gtKnowSec .imgHolder {
+        display: none;
+    }
+
+    .page-id-134 .homeInfoSection.abAboutHeader {
+        padding-top: 50px;
+        padding-bottom: 0;
+    }
+
+    .page-id-134 .homeInfoSection.abAboutHeader .chCol5,
+    .page-id-134 .homeInfoSection.abAboutHeader .chCol7 {
+        width: 50%;
+    }
+
+    .page-id-134 .homeInfoSection.abAboutHeader .infoImageHolder {
+        position: relative;
+        width: auto;
+        margin-left: -53px;
+        margin-top: 20px;
+    }
+
+    .page-id-134 .homeInfoSection.abAboutHeader .infoImageHolder img {
+        position: relative;
+        height: auto;
+    }
+
+    .page-id-134 .homeInfoSection.abAboutHeader .dbInfoTextDescr {
+        padding-left: 20px;
+        margin-top: 0;
+    }
+
+    .aboutFoundTextDescr .aboutFoundHeader .abHeaderImg {
+        width: 108px;
+        height: 108px;
+        margin: 0;
+    }
+
+    .aboutFoundHeader {
+        display: flex;
+        align-items: center;
+        text-align: left;
+    }
+
+    .aboutFoundHeader .abHeaderText:before {
+        width: 163px;
+        height: 2px;
+        margin: 0;
+        right: auto;
+    }
+
+    .abFounderText {
+        font-size: 20px;
+        line-height: 40px;
+        text-align: left;
+    }
+
+    .aboutFoundHeader .abHeaderText {
+        margin-left: 30px;
+    }
+
+   .page-id-138 .clientTrustSpecsSec .corporatNeedHeader {
+       margin-top: -125px;
+   }
+
+    .bankAccountHeader h2,
+    .bankAccountHeader .h2 {
+        font-size: 60px;
+        line-height: 50px;
+        margin-bottom: 37px;
+    }
+
+    .opOpenBankAccountSec {
+        padding: 100px 85px;
+    }
+
+    .opOpenBankAccountSec .chCol4 {
+        width: 33.333%;
+    }
+
+    .bankDocumentWrap h3,
+    .bankDocumentWrap .h3 {
+        font-size: 18px;
+        color: #6C6C6C;
+    }
+
+    .syStartJourneySec .ameProcessList > li{
+        width: 33.333%;
+    }
+
+    .syStartJourneySec .ameProcessList > li +li {
+        margin-top: 0;
+    }
+
+    .syStartJourneySec .ameProcessList > li h3,
+    .syStartJourneySec .ameProcessList > li .h3 {
+        font-size: 18px;
+        line-height: 30px;
+        margin-bottom: 0;
+    }
+
+    .incropFormSec {
+        padding-top: 95px;
+        padding-bottom: 100px;
+    }
+
+    .csSecretaryTextDescr .linkBtn {
+        margin-left: 52px;
+        width: 27%;
+        margin-right: 0;
+    }
+
+    .cnctFormWrap .colsHolder .chCol:last-child .wpcf7-not-valid-tip {
+        bottom: -120px;
+    }
+}
+
+@media (min-width: 992px) {
+    .mainNavigation > li + li {
+        margin-left: 17px;
+    }
+
+    .mainNavigation {
+        font-size: 16px;
+    }
+
+    .dbInfoTextDescr h1,
+    .dbInfoTextDescr .h1 {
+        font-size: 34px;
+        line-height: 45px;
+        margin-bottom: 30px;
+    }
+
+    .offSetHeader {
+        padding-left: 66px;
+        padding-right: 54px;
+    }
+
+    .infoBtnWrap .btnDefaultWidth {
+        min-width: 183px;
+    }
+
+    .aboutFoundTextDescr .infoBtnWrap .btnDefaultWidth {
+        min-width: 140px;
+    }
+
+    .offSetSebSec {
+        padding-left: 100px;
+    }
+
+    .infoImageHolder {
+        width: 45%;
+    }
+
+    .homeInfoSection .chCol5 {
+        width: 45%;
+    }
+
+    .homeInfoSection .chCol7 {
+        width: 55%;
+    }
+
+    .atAccountSec .offSetSebSec {
+        padding-left: 70px;
+    }
+
+    .faqQuestionSec .accountOffset {
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+
+    .corporatNeedHelpSec .aboutPageOffset {
+        padding-left: 90px;
+        padding-right: 90px;
+    }
+
+    .clientTrustSpecsSec .aboutPageOffset {
+        padding-left: 120px;
+        padding-right: 120px;
+    }
+
+    .additionAddServiceSec .aboutPageOffset {
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+
+    .sslOffsetWrap {
+        padding-left: 100px;
+        padding-right: 50px;
+    }
+
+    .incropHelpOffset {
+        padding-right: 75px;
+    }
+
+    .preIncroDescrWrap .incropHelpOffset {
+        padding-left: 75px;
+    }
+
+    .inropForienOffSet {
+        padding-left: 110px;
+        padding-right: 110px
+    }
+
+    .sebBusinessNeed {
+        padding-top: 96px;
+    }
+
+    .dbInfoTextDescr {
+        font-size: 20px;
+        padding-left: 35px;
+        line-height: 30px;
+    }
+
+    .dbInfoTextDescr .subHeading {
+        font-size: 17px;
+        margin-bottom: 10px;
+    }
+
+    .dbInfoTextDescr strong {
+        font-size: 20px;
+        line-height: 30px;
+        margin-bottom: 25px;
+    }
+
+    .infoBtnWrap .btn {
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 20px;
+        line-height: 42px;
+    }
+
+    .aboutFoundTextDescr .infoBtnWrap .btn {
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 17px;
+        line-height: 32px;
+    }
+
+    .sebNeedHeader h2,
+    .sebNeedHeader .h2 {
+        font-size: 40px;
+    }
+
+    .sebNeedDescriptionWrap {
+        padding-top: 30px;
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    .sebNeedDescriptionWrap h3,
+    .sebNeedDescriptionWrap .h3 {
+        font-size: 30px;
+        line-height: 45px;
+        margin-bottom: 15px;
+    }
+
+    .sebNeedDescriptionWrap p {
+        margin-bottom: 20px;
+    }
+
+    .sebNeedDescriptionWrap .gsStartBtn {
+        font-size: 20px;
+        line-height: 42px;
+    }
+
+    .sebNeedDescriptionWrap.atAccountDescrWrap {
+        margin-top: -30px;
+        max-width: 370px;
+    }
+
+    .csSecretarySec {
+        padding-top: 362px;
+    }
+
+    .csSecretaryTextDescr {
+        padding-left: 25px;
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .csSecretaryTextDescr h2,
+    .csSecretaryTextDescr .h2 {
+        font-size: 35px;
+    }
+
+    .ameAccountingSec {
+        padding-top: 80px;
+    }
+
+    .home .ameTextDescription {
+        padding-left: 78px;
+    }
+
+    .ameHeader {
+        font-size: 18px;
+        line-height: 55px;
+    }
+
+    .ameHeader h2,
+    .ameHeader .h2 {
+        font-size: 60px;
+        line-height: 65px;
+    }
+
+    .ameAccountingSec.syStartJourneySec .ameHeader h2,
+    .ameAccountingSec.syStartJourneySec .ameHeader .h2 {
+        font-size: 46px;
+        line-height: 57px;
+    }
+
+    .ameProcessList > li h3,
+    .ameProcessList > li .h3 {
+        font-size: 25px;
+    }
+
+    .scConfusedTextDescr {
+        max-width: 532px;
+        font-size: 25px;
+        line-height: 36px;
+    }
+
+    .scConfusedTextDescr h2,
+    .scConfusedTextDescr .h2 {
+        font-size: 35px;
+        line-height: 44px;
+        margin-bottom: 15px;
+    }
+
+    .scConfusedTextDescr .borderLine {
+        margin-bottom: 28px;
+    }
+
+    .scConfusedSec {
+        padding-bottom: 40px;
+    }
+
+    .scImage img {
+        width: 83%;
+    }
+
+    .abAboutHeader .dbInfoTextDescr h1,
+    .abAboutHeader .dbInfoTextDescr .h1 {
+        font-size: 35px;
+        line-height: 45px;
+    }
+
+    .getReadybanner {
+        padding-bottom: 70px;
+    }
+
+    .getReadyTextDescr {
+        max-width: 450px;
+        margin-right: 55px;
+    }
+
+    .getReadyTextDescr h2,
+    .getReadyTextDescr .h2 {
+        font-size: 40px;
+    }
+
+    .readyTextWrap {
+        padding-top: 40px;
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .readyBgImage img {
+        width: 100%;
+    }
+
+    .submitFormWrap {
+        max-width: 463px;
+        margin-right: 136px;
+    }
+
+    .contactFormSec {
+        padding-top: 183px;
+        padding-bottom: 26px;
+    }
+
+    .formHeader {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .formHeader h2,
+    .formHeader .h2 {
+        font-size: 30px;
+    }
+
+    .formGroup .formControl {
+        font-size: 16px;
+        height: 45px;
+        line-height: 36px;
+    }
+
+    .formGroup textarea.formControl {
+        height: 175px;
+    }
+
+    .formGroup {
+        margin-bottom: 14px;
+    }
+
+    .accTextDescr h2,
+    .accTextDescr .h2 {
+        font-size: 38px;
+        line-height: 48px;
+    }
+
+    .accTopBannerImage {
+        bottom: -160px;
+    }
+
+    .accTabListWrap {
+        margin-top: 59px;
+    }
+
+    .accTabsList > li > a {
+        font-size: 25px;
+        min-width: 176px;
+    }
+
+    .page-id-578 .accTabsList > li > a {
+        font-size: 22px;
+        min-width: 145px;
+    }
+
+    .ocAccountBg {
+        bottom: 40px;
+    }
+
+    .ocAcountServices:before {
+        bottom: 150px;
+    }
+
+    .ocAcountServices {
+        padding-bottom: 230px;
+    }
+
+    .csCorporateTopBanner h2,
+    .csCorporateTopBanner .h2 {
+        font-size: 35px;
+        line-height: 45px;
+    }
+
+    .page-id-578 .csCorporateTopBanner h2,
+    .page-id-578 .csCorporateTopBanner .h2 {
+        font-size: 35px;
+    }
+
+    .csCorporateTopBanner {
+        max-width: 539px;
+        padding: 23px 30px 22px 35px;
+        font-size: 17px;
+        line-height: 27px;
+    }
+
+    .csCorporateTopBanner .btnWhiteSecondary {
+        font-size: 20px;
+        line-height: 42px;
+    }
+
+    .csCorporateTopSec .align {
+        padding-top: 40px;
+        padding-bottom: 104px;
+    }
+
+    .canDoTextDescr h2,
+    .canDoTextDescr .h2 {
+        font-size: 35px;
+        line-height: 45px;
+    }
+
+    .addServiceTable > thead > tr > th {
+        font-size: 22px;
+    }
+
+    .addServiceTable > tbody > tr > td {
+        font-size: 24px;
+        line-height: 60px;
+    }
+
+    .addServiceTable > tbody > tr > td:first-child {
+        font-size: 20px;
+    }
+
+    .caCredCorpSec .chCol3 {
+        width: 25%;
+    }
+
+    .ocAcountServices  .chCol4 {
+        width: 33.333%;
+    }
+
+    .clientChoiceHeader h2,
+    .clientChoiceHeader .h2 {
+        font-size: 36px;
+        line-height: 56px;
+    }
+
+    .clientChoiceImage {
+        top: 9px;
+        right: -60px;
+    }
+
+    .clientChoiceImage img {
+        width: 80%;
+    }
+
+    .standardRquireSec {
+        padding-bottom: 60px;
+    }
+
+    .standImageHolder{
+        top: -219px;
+    }
+
+    .standImageHolder img {
+        width: 100%;
+    }
+
+    .srStandardRequireText {
+        max-width: 460px;
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    .srStandardRequireText h2,
+    .srStandardRequireText .h2 {
+        font-size: 45px;
+        line-height: 50px;
+        margin-bottom: 40px;
+    }
+
+    .standRequireList > li + li {
+        margin-top: 16px;
+        line-height: 23px;
+    }
+
+    .preIncroHeader h2,
+    .preIncroHeader .h2 {
+        font-size: 45px;
+    }
+
+    .preQuestionTextWrap h3,
+    .preQuestionTextWrap .h3 {
+        font-size: 30px;
+        line-height: 35px;
+    }
+
+    .dtTypesDetails summary h2,
+    .dtTypesDetails summary .h2 {
+        font-size: 25px;
+    }
+
+    .syStartJourneySec .ameProcessList > li h3,
+    .syStartJourneySec .ameProcessList > li .h3 {
+        font-size: 25px;
+    }
+
+    .page-id-578 .whatWeDoSec .chCol6 {
+        width: 33.333%;
+    }
+
+    .page-id-549 .accTabsList > li > a {
+        min-width: 148px;
+    }
+
+    .otTeamExperirenseWrap {
+        padding-bottom: 190px;
+    }
+
+    .ipProcessImage {
+        top: -360px;
+    }
+
+    .preIncroHeader {
+        font-size: 17px;
+        line-height: 23px;
+    }
+
+    .ftNavList > li +li {
+        margin-left: 30px;
+    }
+
+    .ftNavList > li a {
+        font-size: 16px;
+    }
+
+    .preIncroHeader h2::before, .preIncroHeader .h2::before {
+        right: -13px;
+    }
+
+    .preIncroHeader h2,
+    .preIncroHeader .h2 {
+        width: 51%;
+    }
+
+    .ocrRequireDescrBlock {
+        padding: 306px 110px 56px;
+    }
+
+    .crReqiuresList > li + li:before {
+        left: -20px;
+    }
+
+    .contactFormWrap {
+        margin-top: -180px;
+    }
+
+    .wpcf7-response-output {
+        bottom: -25px;
+        max-width: 270px;
+        line-height: 25px;
+    }
+
+    .wpcf7-not-valid-tip {
+        bottom: -38px;
+        font-size: 13px;
+    }
+
+    .blogCategorySec {
+        padding-top: 205px;
+    }
+
+    .blogCategorySec .chCol4 {
+        width: 33.333%;
+    }
+
+    .catDetailPageHeader {
+        padding-top: 75px;
+    }
+
+    .logo {
+        max-width: 208px;
+    }
+
+    .gkKnowLeftImage {
+        width: 26%;
+    }
+
+    .gkKnowRightImage {
+        width: 18%;
+    }
+
+    .gkButtonWrap .btnGettingKnow {
+        max-width: 406px;
+        padding: 51px 91px;
+    }
+
+    .gkKnowLeftImage {
+        left: 31px;
+    }
+
+    .gkKnowRightImage {
+        right: 34px;
+    }
+
+    .cnctFormWrap .colsHolder .chCol:last-child .wpcf7-not-valid-tip {
+        bottom: -180px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .dbInfoTextDescr h1,
+    .dbInfoTextDescr .h1 {
+        font-size: 44px;
+        margin-bottom: 30px;
+        line-height: 55px;
+    }
+
+    .mainNavigation > li + li {
+        margin-left: 54px;
+    }
+
+    .sebBusinessNeed {
+        padding-top: 146px;
+    }
+
+    .sebNeedDescriptionWrap {
+        padding-top: 60px;
+        max-width: 517px;
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .sebNeedDescriptionWrap h3,
+    .sebNeedDescriptionWrap .h3 {
+        font-size: 35px;
+        margin-bottom: 25px;
+    }
+
+    .sebNeedDescriptionWrap p {
+        margin-bottom: 35px;
+    }
+
+    .sebNeedDescriptionWrap .gsStartBtn {
+        margin-bottom: 20px;
+    }
+
+    .sebBusinessNeed.atAccountSec {
+        padding-top: 20px;
+    }
+
+    .scConfusedSec {
+        padding-bottom: 92px;
+    }
+
+    .scConfusedTextDescr {
+        max-width: 702px;
+        font-size: 30px;
+        line-height: 45px;
+    }
+
+    .scConfusedTextDescr h2,
+    .scConfusedTextDescr .h2 {
+        line-height: 60px;
+        font-size: 55px;
+    }
+
+    .scImage img {
+        width: 100%;
+    }
+
+    .abAboutHeader .dbInfoTextDescr {
+        padding-left: 95px;
+    }
+
+    .aboutFoundTextDescr .infoBtnWrap .btn {
+        font-size: 20px;
+        line-height: 42px;
+    }
+
+    .aboutFoundTextDescr .infoBtnWrap .btnDefaultWidth {
+        min-width: 183px;
+    }
+
+    .getReadyTextDescr {
+        max-width: 570px;
+    }
+
+    .getReadyTextDescr h2,
+    .getReadyTextDescr .h2 {
+        font-size: 55px;
+    }
+
+    .readyBgImage {
+        left: 6%;
+    }
+
+    .contactFormSec {
+        padding-top: 233px;
+        padding-bottom: 42px;
+    }
+
+    .submitFormWrap {
+        max-width: 583px;
+        margin-right: 166px;
+    }
+
+    .formHeader {
+        font-size: 25px;
+        line-height: 35px;
+        margin-bottom: 26px;
+    }
+
+    .formHeader h2,
+    .formHeader .h2 {
+        font-size: 40px;
+        line-height: 60px;
+        margin-bottom: 15px;
+    }
+
+    .formGroup {
+        margin-bottom: 22px;
+    }
+
+    .formGroup textarea.formControl {
+        height: 196px;
+    }
+
+    .formGroup .formControl {
+        width: 100%;
+        font-size: 20px;
+        height: 57px;
+        line-height: 40px;
+    }
+
+    .accTextDescr .accSubHead {
+        font-size: 17px;
+        margin-bottom: 20px;
+    }
+
+    .accTextDescr h2,
+    .accTextDescr .h2 {
+        font-size: 45px;
+        line-height: 55px;
+        margin-bottom: 20px;
+    }
+
+    .accTextDescr {
+        color: #000;
+        font-size: 20px;
+        line-height: 35px;
+    }
+
+    .accTopBannerImage {
+        bottom: -280px;
+    }
+
+    .accTabListWrap {
+        margin-top: 159px;
+    }
+
+    .ocAcountServices .testiHeader h2,
+    .ocAcountServices .testiHeader .h2 {
+        font-size: 40px;
+    }
+
+    .accServiceList > li:before {
+        top: 18px;
+        left: -20px;
+    }
+
+    .accServiceWrap h3,
+    .accServiceWrap .h3 {
+        height: 62px;
+    }
+
+    .ocAccountBg {
+        bottom: -80px;
+    }
+
+    .ocAcountServices:before {
+        bottom: 30px;
+    }
+
+    .annualAccount {
+        padding-top: 120px;
+    }
+
+    .faqQuestionSec .accountOffset {
+        padding-left: 130px;
+        padding-right: 130px;
+    }
+
+    .faqQuestions summary {
+        max-width: 350px;
+    }
+
+    .csCorporateTopBanner {
+        max-width: 639px;
+        padding: 27px 33px 34px 43px;
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+    .corporatNeedHelpSec {
+        padding-top: 100px;
+    }
+
+    .canDoCorporateSec  .canDoImageHolder {
+        position: absolute;
+        right: 0;
+        top: -110px;
+    }
+
+    .canDoTextDescr h2,
+    .canDoTextDescr .h2 {
+        font-size: 40px;
+        line-height: 50px;
+    }
+
+    .canDoDetailList > li h3,
+    .canDoDetailList > li .h3 {
+        font-size: 25px;
+        line-height: 30px;
+    }
+
+    .canDoDetailList > li {
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+    .aboutPageOffset {
+        padding-left: 98px;
+        padding-right: 98px;
+    }
+
+    .page-id-134 .aboutFounderDescrSec .aboutPageOffset {
+        padding-left: 58px;
+        padding-right: 58px;
+    }
+
+    .addServiceTable > thead > tr > th {
+        font-size: 25px;
+        line-height: 30px;
+    }
+
+    .addServiceTable > tbody > tr > td:first-child {
+        font-size: 25px;
+        line-height: 25px;
+    }
+
+    .addServiceTable > tbody > tr > td .serviceSubinfo {
+        font-size: 19px;
+    }
+
+    .addServiceTable > tbody > tr > td {
+        font-size: 30px;
+        line-height: 65px;
+    }
+
+    .csCorporateTopBanner h2,
+    .csCorporateTopBanner .h2 {
+        font-size: 44px;
+        line-height: 55px;
+        margin-bottom: 20px;
+    }
+
+    .csCorporateTopBanner p {
+        margin-bottom: 20px;
+    }
+
+    .csCorporateTopSec .align {
+        padding-top: 60px;
+        padding-bottom: 164px;
+    }
+
+    .sebNeedDescriptionWrap.atAccountDescrWrap {
+        margin-top: 20px;
+        max-width: 370px;
+    }
+
+    .page-id-578 .csCorporateTopBanner h2,
+    .page-id-578 .csCorporateTopBanner .h2 {
+        font-size: 48px;
+    }
+
+    .page-id-578 .accTabsList > li > a {
+        font-size: 25px;
+        min-width: 193px;
+    }
+
+    .clientChoiceHeader h2,
+    .clientChoiceHeader .h2 {
+        font-size: 40px;
+        line-height: 50px;
+    }
+
+    .clientChoiceImage {
+        top: 47px;
+        right: 60px;
+    }
+
+    .clientChoiceImage img {
+        width: 100%;
+    }
+
+    .srStandardRequireText {
+        max-width: 600px;
+    }
+
+    .ameAccountingSec.syStartJourneySec .ameHeader h2,
+    .ameAccountingSec.syStartJourneySec .ameHeader .h2 {
+        font-size: 60px;
+        line-height: 65px;
+    }
+
+    .otTeamExperirenseWrap {
+        padding-bottom: 300px;
+    }
+
+    .ipProcessImage {
+        top: -460px;
+    }
+
+    .home .sebNeedDescriptionWrap {
+        max-width: 397px;
+    }
+
+    .preIncroHeader h2,
+    .preIncroHeader .h2 {
+        width: 40%;
+    }
+
+    .preIncroHeader {
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+    .contactFormWrap {
+        margin-top: -190px;
+    }
+
+    .wpcf7-response-output {
+        bottom: 0;
+        max-width: none;
+    }
+
+    .wpcf7-not-valid-tip {
+        bottom: -43px;
+    }
+
+    .blogListOffset {
+        padding-left: 160px;
+        padding-right: 160px;
+    }
+
+    .catDetailPageHeader {
+        padding-top: 95px;
+    }
+
+    .mayInterestSec .chCol6 {
+        width: 50%;
+    }
+
+    .mainNavigation > li + li {
+        margin-left: 34px;
+    }
+
+    .gkKnowLeftImage {
+        width: 100%;
+    }
+
+    .gkKnowRightImage {
+        width: 100%;
+    }
+
+    .cnctFormWrap .colsHolder .chCol:last-child .wpcf7-not-valid-tip {
+        bottom: -206px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .contactFormSec .formSubmitbg {
+        width: 100%;
+    }
+
+    .contactFormSec .formSubmitbg img {
+        width: 100%;
+    }
+
+    .backgroundWaveImage {
+        top: -20px;
+    }
+
+    .atTexationBg {
+        top: -280px;
+    }
+
+    .accTopBannerImage {
+        bottom: -330px;
+    }
+
+    .accTabListWrap {
+        margin-top: 196px;
+    }
+
+    .ocAccountBg {
+        bottom: -140px;
+    }
+
+    .sslLocateTopSec .align {
+        padding-bottom: 244px;
+    }
+
+    .csCorporateTopSec .align {
+        padding-bottom: 124px;
+    }
+
+    .conclusionBgImage {
+        left: 190px;
+    }
+
+    .conclusionBgImage img {
+        width: auto;
+    }
+
+    .catDetailPageHeader {
+        padding-top: 165px;
+    }
+}
+
+@media (min-width: 1520px) {
+    .ocAccountBg {
+        bottom: -230px;
+    }
+
+    .ocAcountServices::before {
+        bottom: -60px;
+    }
+
+    .sslLocateTopSec .align {
+        padding-bottom: 284px;
+    }
+
+    .csCorporateTopSec .align {
+        padding-bottom: 284px;
+    }
+
+    .inropForienOffSet {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .conclusionBgImage {
+        left: 230px;
+    }
+}
+
+@media (min-width: 1800px) {
+    .offSetSebSec {
+        padding-left: 0;
+    }
+
+    .backgroundWaveImage {
+        top: -50px;
+    }
+
+    .csSecretarySec {
+        padding-top: 522px;
+        padding-bottom: 522px;
+    }
+
+    .atTexationBg {
+        top: -380px;
+    }
+
+    .dbDevelopBussinesSec {
+        padding-top: 530px;
+    }
+
+    .accTopBannerImage {
+        bottom: -510px;
+    }
+
+    .accTabListWrap {
+        margin-top: 296px;
+    }
+
+    .ocAcountServices::before {
+        bottom: -70px;
+        height: 530px;
+    }
+
+    .ocAccountBg {
+        bottom: -280px;
+    }
+
+    .annualAccount {
+        padding-top: 270px;
+    }
+
+    .sslLocateTopSec .align {
+        padding-bottom: 284px;
+    }
+
+    .page-id-138 .csCorpTopImage {
+        top: -110px;
+    }
+
+    .page-id-549 .csCorpTopImage {
+        top: -80px;
+    }
+
+    .page-id-549 .accTabListWrap {
+        margin-top: -35px;
+    }
+
+    .conclusionBgImage {
+        left: 430px;
+    }
+
+    .page-id-578 .accTabListWrap {
+        margin-top: 190px;
+    }
+
+    .contactFormSec {
+        padding-top: 283px;
+    }
+
+    .preIncroHeader {
+        margin-left: -115px;
+    }
+
+    .preIncroHeader {
+        font-size: 16px;
+        line-height: 30px;
+    }
+
+    .preIncroHeader strong {
+        width: 53%;
+    }
+
+    .contactFormWrap {
+        margin-top: -60px;
+    }
+}
+
+@media (max-width: 767px) {
+    .mainNavigation {
+        position: relative;
+    }
+
+    .mainNavigation:before {
+        position: absolute;
+        content: "";
+        left: -9999px;
+        right: -9999px;
+        top: -12px;
+        bottom: 0;
+        background-color: #1270ED;
+        z-index: -1;
+    }
+
+    .testimonialSlider .slick-dots {
+        display: none !important;
+    }
+
+    .scConfusedSec,
+    .accTabListWrap,
+    .ocAccountBg,
+    .accountTopBanner .accTopBannerImage,
+    .ocAcountServices::before,
+    .annualAccount .imgHolder,
+    .contactFormSec::before,
+    .aboutFoundTextDescr .infoBtnWrap {
+        display: none;
+    }
+
+    .ftContentWrap {
+        text-align: center;
+    }
+
+    .annualAccountTextDescr {
+        text-align: center;
+    }
+
+    .annualAccountTextDescr .accountPlanList {
+        text-align: left;
+    }
+
+    .abAboutHeader .dbInfoTextDescr .subHeading {
+        font-size: 17px;
+        line-height: 30px;
+        margin-bottom: 10px;
+    }
+
+    .csCorpTopImage {
+        display: none;
+    }
+
+    .csCorporateTopBanner:before {
+        position: absolute;
+        content: "";
+        left: -9999px;
+        right: -9999px;
+        top: -9999px;
+        bottom: -30px;
+        background-color: #082CD4E8;
+        z-index: -1;
+    }
+
+    .clientTrustSpecsSec .cloudImageHolder {
+        display: none;
+    }
+
+    .corporatePricingSec .bgCloudImage,
+    .dhNomineDescrWrap .imgHolder {
+        display: none;
+    }
+
+    .additionAddServiceSec {
+        display: none;
+    }
+
+    .page-id-138 .tsTestimonialSec {
+        padding-bottom: 0;
+    }
+
+    .page-id-138 .tsTestimonialSec .testiHeader {
+        display: none;
+    }
+
+    .sslLocationImage {
+        display: none;
+    }
+
+    .conclusionBgImage {
+        display: none;
+    }
+
+    .incropImageHolder {
+        margin-left: -25px;
+        margin-right: -25px;
+        margin-bottom: 30px;
+    }
+
+    .incropImageHolder img {
+        width: 100%;
+    }
+
+    .clientChoiceImage {
+        display: none;
+    }
+
+    .tsTestimonialSec.darkBackgroundTestimonal .imageHolder {
+        display: none;
+    }
+
+    .whatWeDoSec .testiHeader {
+        margin-bottom: 80px;
+    }
+
+    .frequentlyAskedWrapper .colsHolder {
+        display: none;
+    }
+
+    .page-id-140 .frequentlyAskedWrapper .colsHolder {
+        display: block;
+    }
+
+    .frequentlyAskedWrapper .colsHolder.frequentlyAskedColsWrap {
+        display: block;
+    }
+
+    .faqQuestionSec h3,
+    .faqQuestionSec .h3 {
+        cursor: pointer;
+        position: relative;
+    }
+
+    .faqQuestionSec h3:before,
+    .faqQuestionSec .h3:before {
+        position: absolute;
+        content: "\f053";
+        font-weight: 900;
+        font-family: "Font Awesome 6 Free";
+        background-color: #1270ED;
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: rotate(180deg);
+        font-size: 20px;
+        right: 0;
+        top: 11px;
+    }
+
+    .faqQuestionSec h3.frequentlyAskedHeadingWrap:before,
+    .faqQuestionSec .h3.frequentlyAskedHeadingWrap:before {
+        transform: rotate(-90deg);
+    }
+
+    .faqQuestionSec .accountOffset {
+        padding: 0;
+    }
+
+    .ipProcessImage {
+        display: none;
+    }
+
+    .wnNextPlanSec {
+        margin-top: -10px;
+    }
+
+    .ocrRequireDescrBlock:before {
+        position: absolute;
+        content: "";
+        left: -9999px;
+        right: -9999px;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+        background-color: #F2F2F2;
+    }
+
+    .page-id-549 .tsTestimonialSec .slick-dots {
+        display: flex !important;
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+
+    .formCloudLeft {
+        display: none;
+    }
+
+    .aboutFounderDescrSec .colsHolder {
+        flex-direction: column-reverse;
+    }
+
+    .page-id-142 .csCorporateTopSec.sslLocateTopSec .csCorporateTopBanner.contactTopBanner{
+        display: none;
+    }
+
+    .page-id-142 .sslLocateTopSec .align {
+        padding-bottom: 0;
+    }
+
+    .formCloudRight {
+        position: absolute;
+        right: 0;
+        bottom: 10px;
+        left: 0;
+        text-align: center;
+    }
+
+    .formCloudRight img {
+        width: 82%;
+    }
+
+    .rcRecentPostDescrList {
+        padding-top: 39px;
+        padding-bottom: 39px;
+        position: relative;
+    }
+
+    .rcRecentPostDescrList :before {
+        position: absolute;
+        content: "";
+        left: -9999px;
+        right: -9999px;
+        background-color: #F5F5F5;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+    }
+
+    .csSecrityBlogDescr {
+        display: none;
+    }
+
+    .blogDetailButtonList > li > a {
+        width: 100%;
+        text-align: center;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        background-color: #082CD4;
+        border-radius: 2px;
+    }
+
+    .blogDetailButtonList > li + li {
+        margin-top: 30px;
+    }
+
+    .scConfusedSec.singlePostBottom {
+        padding-bottom: 70px;
+        padding-top: 0;
+    }
+
+    .page-id-138 .csCorporateTopSec .csCorporateTopBanner .btn:hover,
+    .page-id-549 .csCorporateTopSec .csCorporateTopBanner .btn:hover,
+    .page-id-578 .csCorporateTopSec .csCorporateTopBanner .btn:hover {
+        border-color: #fff;
+        background-color: transparent;
+    }
+
+    .opOpenBankAccountSec .imgHolder {
+        display: none;
+    }
+
+    .gtKnowSec::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: -445px;
+        background-color: #082CD4;
+        z-index: -1;
+    }
+
+}
